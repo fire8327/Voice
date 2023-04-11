@@ -19,5 +19,5 @@ dropdown.click(function(e) {
   list.slideToggle(500);
   img.toggleClass("rotate-180");
   dropdown.toggleClass("border-b");
-  dropdown.toggleClass("pb-2");
+  dropdown.toggleClass("pb-0");
 });
