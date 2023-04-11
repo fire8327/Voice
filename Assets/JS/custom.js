@@ -4,6 +4,8 @@ $("#toggler").click(()=>{
   $("#toggler img:first-child").toggleClass("hidden");
   $("#toggler img:last-child").toggleClass("hidden");
   $("#menu").toggleClass("-translate-y-[calc(100%+43px)]");
+  $("header").toggleClass("border-b");
+  $("header").toggleClass("pb-px");
 });
 
 

@@ -8,7 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Главная</title>
 </head>
-<body class="px-6">
+<body class="px-6 inter">
     <header class="w-full flex items-center justify-between pt-1 pb-px border-b border-black">
         <div>
             <img src="Assets/Images/header/logo.png" alt="">
@@ -61,7 +61,36 @@
         <a href="tel:8 800 000 00 00" class="pt-10">8 800 000 00 00 </a>
     </div>
 
-    
+    <div class="w-full flex flex-col pt-[50px] gap-[50px]">
+        <p class="text-4xl tracking-[.05em] prata">Магазин голосов</p>
+        <div class="flex flex-col gap-5 w-full">
+            <p>У нас вы можете купить начитку для рекламы, а также заказать озвучку корпоративного фильма, презентации, вокального или пародийного ролика, песни, гимна компании, блога, канала и т.д.</p>
+            <p>Изготовим ролик "под ключ".</p>            
+            <p>Делаем начитки на русском и иностранных языках.</p>            
+            <button class="bg-[#F76B24] rounded-[20px] px-16 py-3 text-white w-fit mx-auto mt-5 inter">Купить</button>
+        </div>
+    </div>
+
+    <div class="w-full flex flex-col pt-20 gap-[30px] inter">
+        <p class="prata text-2xl">Рассчитать стоимость</p>
+        <div class="flex flex-col gap-4 w-full">
+            <textarea name="" id="" class="w-full p-6 h-[272px] border-[3px] border-[#8C8B8B] rounded-[20px] text-sm" placeholder="Введите текст начитки"></textarea>
+            <div class="flex items-center gap-[34px] text-sm">
+                <p class="w-32">Хронометраж, в секундах</p>
+                <input type="text" class="rounded-[20px] border border-[#8C8B8B] flex items-center justify-center w-[90px] h-[44px]">
+            </div>
+            <div class="flex items-center gap-[34px] text-sm">
+                <p class="w-32">Ставка диктора, в рублях</p>
+                <input type="text" class="rounded-[20px] border border-[#8C8B8B] flex items-center justify-center w-[90px] h-[44px]">
+            </div>
+            <div class="flex items-center gap-[34px] text-sm">
+                <p class="w-32">Стоимость заказа</p>
+                <input type="text" class="rounded-[20px] border border-[#8C8B8B] flex items-center justify-center w-[90px] h-[44px]">
+            </div>
+            <button class="bg-[#F76B24] rounded-[20px] px-5 py-4 text-white w-fit mx-auto mt-[14px] inter">Рассчитать стоимость</button>
+            <p class="text-sm pt-5">Хронометраж рассчитывается в зависимости от объема текста по сложному алгоритму. Минимальная ставка диктора составляет 350 ₽.</p>
+        </div>
+    </div>
 
     <footer></footer>
     
