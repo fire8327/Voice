@@ -11,7 +11,6 @@ $("#toggler").click(()=>{
 
 
 /* dropdown */
-
 $(".dropdown").each((i,el) => { 
   let list =  $(el).find('.dropdown-list');
   let img = $(el).find('.dropdown-img');
@@ -22,4 +21,11 @@ $(".dropdown").each((i,el) => {
     dropdown.toggleClass("border-b");
     dropdown.toggleClass("pb-2");
   });
+});
+
+/* filters */
+$("#filters").click(()=>{
+  $("#filt1").toggleClass("hidden");
+  $("#filt2").toggleClass("hidden");
+  $("#more_filters").slideToggle(500);
 });

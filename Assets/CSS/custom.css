@@ -7,3 +7,7 @@
 .inter {
     font-family: 'Inter', sans-serif;
 }
+
+input[type="checkbox"]:checked+label {
+    border-color: #F76B24;
+}
