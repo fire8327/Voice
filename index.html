@@ -8,27 +8,63 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Главная</title>
 </head>
-<body>
-    <header>
-        <div class="w-full flex">
-            <div id="mobile__nav" class="bg-figmabg1 fixed top-0 right-0 flex flex-col h-screen w-full md:w-1/2 pt-12 transform translate-x-full transition duration-300 ease-in-out z-30">
-                <svg id="toggler__expanded" class="text-black w-6 h-6 top-4 left-4 cursor-pointer ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                </svg>
-                <div class="flex flex-col h-full mt-4 p-4">
-                    <a href="" class="uppercase my-5">All products</a>
-                    <a href="" class="uppercase my-5">Solutions</a>
-                    <a href="" class="uppercase my-5">About</a>
-                    <a href="" class="uppercase my-5">Support</a> 
-                </div>
-            </div>
-            <div class="w-full h-screen fixed top-0 right-0 hidden z-10 bg-gray-900 opacity-70" id="overlay"></div>
+<body class="px-6">
+    <header class="w-full flex items-center justify-between pt-1 pb-px border-b border-black">
+        <div>
+            <img src="Assets/Images/header/logo.png" alt="">
+        </div>
+        <div class="flex items-center gap-2.5">
+            <button>
+                <img src="Assets/Images/header/phone.svg" alt="">
+            </button>
+            <button>
+                <img src="Assets/Images/header/chat.svg" alt="">
+            </button>
+            <button type="button" class="relative h-6 w-6" id="toggler">
+                <img src="Assets/Images/header/menu.svg" alt="" class="absolute top-0 left-0">
+                <img src="Assets/Images/header/close.svg" alt="" class="absolute top-0 left-0 hidden">
+            </button>
         </div>
     </header>  
+    <div class="w-full px-6 left-0 absolute top-auto z-50 pt-4 pb-[137px] flex flex-col bg-[#F0F0F0] inter text-xl transition-all duration-500 -translate-y-[calc(100%+43px)]" id="menu">
+        <button class="bg-[#F76B24] pl-4 pr-3 py-3 text-white self-end rounded-[20px]">Вход и регистрация</button>
+        <button class="w-full pb-2 border-b border-black flex items-end justify-between pt-9 dropdown-toggler" type="button">
+            <span>База дикторов</span>
+            <img src="Assets/Images/icons/dropdown.svg" alt="" class="transition-all duration-500 dropdown-img">
+        </button>
+        <div class="hidden dropdown-list">
+            <div class="flex flex-col text-base gap-2.5 mt-2.5 text-[#616060]">
+                <a href="" class="pb-1 border-b border-[#79838B] px-6 w-full">Дикторский голос</a>
+                <a href="" class="pb-1 border-b border-[#79838B] px-6 w-full">Аудиоролик</a>
+                <a href="" class="pb-1 border-b border-[#79838B] px-6 w-full">Вокал</a>
+                <a href="" class="pb-1 border-b border-[#79838B] px-6 w-full">Пародия</a>
+                <a href="" class="pb-1 border-b border-[#79838B] px-6 w-full">Сценарий</a>
+            </div>
+        </div>
+        <button class="w-full pb-2 border-b border-black flex items-end justify-between pt-4 dropdown-toggler" type="button">
+            <span>Купить</span>
+            <img src="Assets/Images/icons/dropdown.svg" alt="" class="transition-all duration-500 dropdown-img">
+        </button>
+        <div class="hidden dropdown-list">
+            <div class="flex flex-col text-base gap-2.5 mt-2.5 text-[#616060]">
+                <a href="" class="pb-1 border-b border-[#79838B] px-6 w-full">Дикторский голос</a>
+                <a href="" class="pb-1 border-b border-[#79838B] px-6 w-full">Аудиоролик</a>
+                <a href="" class="pb-1 border-b border-[#79838B] px-6 w-full">Вокал</a>
+                <a href="" class="pb-1 border-b border-[#79838B] px-6 w-full">Пародия</a>
+                <a href="" class="pb-1 border-b border-[#79838B] px-6 w-full">Сценарий</a>
+            </div>
+        </div>
+        <a href="" class="w-full pb-2 border-b border-black pt-4">Цены</a>
+        <a href="" class="w-full pb-2 border-b border-black pt-4">Дикторы по популярности</a>
+        <a href="" class="w-full pb-2 border-b border-black pt-4">Рассчитать стоимость</a>
+        <a href="" class="w-full pb-2 border-b border-black pt-4">Контакты</a>
+        <a href="tel:8 800 000 00 00" class="pt-10">8 800 000 00 00 </a>
+    </div>
+
+    
 
     <footer></footer>
     
-    <script src="https://unpkg.com/flowbite@1.5.4/dist/flowbite.js"></script>
 	<script src="https://code.jquery.com/jquery-3.6.3.min.js" 
     integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
     crossorigin="anonymous"></script>
