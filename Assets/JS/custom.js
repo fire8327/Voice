@@ -8,8 +8,6 @@ $("#toggler").click(()=>{
   $("#nav").toggleClass("pb-px");
 });
 
-
-
 /* dropdown */
 $(".dropdown").each((i,el) => { 
   let list =  $(el).find('.dropdown-list');
@@ -29,3 +27,17 @@ $("#filters").click(()=>{
   $("#filt2").toggleClass("hidden");
   $("#more_filters").slideToggle(500);
 });
+
+/* files */
+let m = [];
+$("#file").change(()=>{
+  for (let i = 0; i < $("#file")[0].files.length; i++) {
+    let j = $("#file")[0].files[i].name;
+    m.push(j);
+    let str = m.join(", ");
+    $("#files").html(`Выбранные файлы: ${str}`);  
+    $("#files").removeClass("hidden");
+  }
+  m = []; 
+});
+
