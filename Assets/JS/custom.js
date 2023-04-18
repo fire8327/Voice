@@ -41,3 +41,13 @@ $("#file").change(()=>{
   m = []; 
 });
 
+/* registratiion */
+$("#sign").click(()=>{
+  $("#reg").show(500);
+  $("#overlay_reg").show(500);
+});
+$("#close_reg, #overlay_reg").click(()=>{
+  $("#reg").hide(500);
+  $("#overlay_reg").hide(500);
+});
+
