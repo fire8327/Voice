@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Assets/CSS/custom.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Главная</title>
+</head>
+<body class="inter">
+    <header class="w-full px-6">
+        <div class="flex items-center justify-between pt-1 pb-px border-b border-black" id="nav">
+            <a href="#"><img src="Assets/Images/header/logo.svg" alt=""></a>
+            <div class="flex items-center gap-2.5">
+                <button>
+                    <img src="Assets/Images/header/phone.svg" alt="">
+                </button>
+                <button>
+                    <img src="Assets/Images/header/chat.svg" alt="">
+                </button>
+                <button type="button" class="relative h-6 w-6" id="toggler">
+                    <img src="Assets/Images/header/menu.svg" alt="" class="absolute top-0 left-0">
+                    <img src="Assets/Images/header/close.svg" alt="" class="absolute top-0 left-0 hidden">
+                </button>
+            </div>
+        </div>
+    </header>  
+    <div class="w-full px-6 left-0 absolute top-auto z-30 pt-4 pb-[137px] flex flex-col bg-[#F0F0F0] inter text-xl transition-all duration-500 -translate-y-[calc(100%+43px)]" id="menu">
+        <button type="button" class="bg-[#F76B24] pl-4 pr-3 py-3 text-white self-end rounded-[20px]" id="sign">Вход и регистрация</button>
+        <div class="dropdown">
+            <button class="w-full pb-2 border-b border-black flex items-end justify-between mt-9 dropdown-toggler" type="button">
+                <span>База дикторов</span>
+                <img src="Assets/Images/icons/dropdown.svg" alt="" class="transition-all duration-500 dropdown-img">
+            </button>
+            <div class="hidden dropdown-list">
+                <div class="flex flex-col text-base gap-2.5 mt-2.5 text-[#616060]">
+                    <a href="Pages/speakers.html" class="pb-1 border-b border-[#79838B] px-6 w-full">Дикторский голос</a>
+                    <a href="" class="pb-1 border-b border-[#79838B] px-6 w-full">Аудиоролик</a>
+                    <a href="" class="pb-1 border-b border-[#79838B] px-6 w-full">Вокал</a>
+                    <a href="" class="pb-1 border-b border-[#79838B] px-6 w-full">Пародия</a>
+                    <a href="" class="pb-1 border-b border-[#79838B] px-6 w-full">Сценарий</a>
+                </div>
+            </div>
+        </div>
+        <div class="dropdown">            
+            <button class="w-full pb-2 border-b border-black flex items-end justify-between pt-4 dropdown-toggler" type="button">
+                <span>Купить</span>
+                <img src="Assets/Images/icons/dropdown.svg" alt="" class="transition-all duration-500 dropdown-img">
+            </button>
+            <div class="hidden dropdown-list">
+                <div class="flex flex-col text-base gap-2.5 mt-2.5 text-[#616060]">
+                    <a href="" class="pb-1 border-b border-[#79838B] px-6 w-full">Дикторский голос</a>
+                    <a href="" class="pb-1 border-b border-[#79838B] px-6 w-full">Аудиоролик</a>
+                    <a href="" class="pb-1 border-b border-[#79838B] px-6 w-full">Вокал</a>
+                    <a href="" class="pb-1 border-b border-[#79838B] px-6 w-full">Пародия</a>
+                    <a href="" class="pb-1 border-b border-[#79838B] px-6 w-full">Сценарий</a>
+                </div>
+            </div>
+        </div>
+        <a href="" class="w-full pb-2 border-b border-black pt-4">Цены</a>
+        <a href="" class="w-full pb-2 border-b border-black pt-4">Дикторы по популярности</a>
+        <a href="" class="w-full pb-2 border-b border-black pt-4">Рассчитать стоимость</a>
+        <a href="" class="w-full pb-2 border-b border-black pt-4">Контакты</a>
+        <a href="tel:8 800 000 00 00" class="pt-10">8 800 000 00 00 </a>
+    </div>
+
+    <div class="absolute h-screen z-40 top-0 bg-[#CFCFCF] bg-opacity-80 w-full hidden" id="overlay_reg"></div>
+    <div class="bg-white pt-5 pb-10 px-6 flex flex-col absolute top-[139px] z-50 w-full hidden" id="reg">
+        <div class="flex items-center justify-between">
+            <p class="prata">Вход для исполнителей и клиентов</p>
+            <button class="type" id="close_reg"><img src="Assets/Images/icons/close_reg.svg" alt=""></button>            
+        </div>
+        <div class="flex flex-col gap-5 mt-4">
+            <input type="email" class="border border-[#79838B] rounded-[10px] py-0.5 px-2.5 text-sm" placeholder="E-mail">
+            <input type="password" class="border border-[#79838B] rounded-[10px] py-0.5 px-2.5 text-sm" placeholder="Пароль">
+            <a href="" class="font-medium text-xl text-white rounded-[20px] bg-[#F76B24] w-fit mx-auto py-3 px-16">Войти</a>
+        </div>
+        <div class="flex flex-col gap-2.5 mt-2.5">
+            <button class="text-[#F76B24] text-xs self-end">Забыли пароль?</button>
+            <p class="prata">Регистрация</p>
+            <a href="Pages/contractor_reg.html" class="text-sm text-[#F76B24]">Зарегистрироваться как исполнитель</a>
+            <a href="" class="text-sm text-[#F76B24]">Зарегистрироваться как клиент</a>
+        </div>
+    </div>
+
+    <div class="w-full flex flex-col pt-[50px] gap-[50px] px-6">
+        <p class="text-4xl tracking-[.05em] prata">Магазин голосов</p>
+        <div class="flex flex-col gap-5 w-full">
+            <p>У нас вы можете купить начитку для рекламы, а также заказать озвучку корпоративного фильма, презентации, вокального или пародийного ролика, песни, гимна компании, блога, канала и т.д.</p>
+            <p>Изготовим ролик "под ключ".</p>            
+            <p>Делаем начитки на русском и иностранных языках.</p>            
+            <button class="bg-[#F76B24] rounded-[20px] px-16 py-3 text-white w-fit mx-auto mt-5 inter">Купить</button>
+        </div>
+    </div>
+
+    <div class="w-full flex flex-col pt-20 gap-[30px] px-6">
+        <p class="prata text-2xl">Рассчитать стоимость</p>
+        <div class="flex flex-col gap-4 w-full">
+            <textarea name="" id="" class="w-full p-6 h-[272px] border-[3px] border-[#8C8B8B] rounded-[20px] text-sm" placeholder="Введите текст начитки"></textarea>
+            <div class="flex items-center gap-[34px] text-sm">
+                <p class="w-32">Хронометраж, в секундах</p>
+                <input type="text" class="rounded-[20px] border border-[#8C8B8B] flex items-center justify-center w-[90px] h-[44px]">
+            </div>
+            <div class="flex items-center gap-[34px] text-sm">
+                <p class="w-32">Ставка диктора, в рублях</p>
+                <input type="text" class="rounded-[20px] border border-[#8C8B8B] flex items-center justify-center w-[90px] h-[44px]">
+            </div>
+            <div class="flex items-center gap-[34px] text-sm">
+                <p class="w-32">Стоимость заказа</p>
+                <input type="text" class="rounded-[20px] border border-[#8C8B8B] flex items-center justify-center w-[90px] h-[44px]">
+            </div>
+            <button class="bg-[#F76B24] rounded-[20px] px-5 py-4 text-white w-fit mx-auto mt-[14px] inter">Рассчитать стоимость</button>
+            <p class="text-sm pt-5">Хронометраж рассчитывается в зависимости от объема текста по сложному алгоритму. Минимальная ставка диктора составляет 350 ₽.</p>
+        </div>
+    </div>
+
+    <div class="w-full flex flex-col gap-[30px] pt-20 px-6">
+        <p class="text-2xl prata">Витрина голосов</p>
+        <div class="flex flex-col gap-4">
+            <div class="dropdown">
+                <button class="w-full pb-2 border-b border-black flex items-end justify-between dropdown-toggler" type="button">
+                    <p class="text-xl text-left">Мужские</p>
+                    <img src="Assets/Images/icons/dropdown.svg" alt="" class="transition-all duration-500 dropdown-img">
+                </button>
+                <div class="hidden dropdown-list">
+                    <div class="flex flex-col gap-2 mt-5">
+                        <div class="flex items-center px-4 py-1.5 justify-between border-[3px] border-[#827F7F] rounded-[20px]">
+                            <div class="flex items-center gap-6">
+                                <img src="Assets/Images/voices/1.png" alt="">
+                                <div class="flex flex-col text-xs">
+                                    <p class="text-sm">Макарова Светлана</p>
+                                    <p>от 300 руб</p>
+                                    <div class="flex items-center gap-1.5">
+                                        <p class="text-[#F76B24]">Заказать</p>
+                                        <img src="Assets/Images/icons/arrow.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="border border-black w-[35px] h-[35px] flex items-center justify-center">
+                                <img src="Assets/Images/icons/play.svg" alt="">
+                            </button>
+                        </div>
+                        <div class="flex items-center px-4 py-1.5 justify-between border-[3px] border-[#827F7F] rounded-[20px]">
+                            <div class="flex items-center gap-6">
+                                <img src="Assets/Images/voices/1.png" alt="">
+                                <div class="flex flex-col text-xs">
+                                    <p class="text-sm">Макарова Светлана</p>
+                                    <p>от 300 руб</p>
+                                    <div class="flex items-center gap-1.5">
+                                        <p class="text-[#F76B24]">Заказать</p>
+                                        <img src="Assets/Images/icons/arrow.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="border border-black w-[35px] h-[35px] flex items-center justify-center">
+                                <img src="Assets/Images/icons/play.svg" alt="">
+                            </button>
+                        </div>
+                        <div class="flex items-center px-4 py-1.5 justify-between border-[3px] border-[#827F7F] rounded-[20px]">
+                            <div class="flex items-center gap-6">
+                                <img src="Assets/Images/voices/1.png" alt="">
+                                <div class="flex flex-col text-xs">
+                                    <p class="text-sm">Макарова Светлана</p>
+                                    <p>от 300 руб</p>
+                                    <div class="flex items-center gap-1.5">
+                                        <p class="text-[#F76B24]">Заказать</p>
+                                        <img src="Assets/Images/icons/arrow.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="border border-black w-[35px] h-[35px] flex items-center justify-center">
+                                <img src="Assets/Images/icons/play.svg" alt="">
+                            </button>
+                        </div>
+                        <div class="flex gap-2 items-center self-end">
+                            <p class="text-[#F76B24] text-base">Подробнее</p>
+                            <img src="Assets/Images/icons/arrow.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="w-full pb-2 border-b border-black flex items-end justify-between dropdown-toggler" type="button">
+                    <p class="text-xl text-left">Женские</p>
+                    <img src="Assets/Images/icons/dropdown.svg" alt="" class="transition-all duration-500 dropdown-img">
+                </button>
+                <div class="hidden dropdown-list">
+                    <div class="flex flex-col gap-2 mt-5">
+                        <div class="flex items-center px-4 py-1.5 justify-between border-[3px] border-[#827F7F] rounded-[20px]">
+                            <div class="flex items-center gap-6">
+                                <img src="Assets/Images/voices/1.png" alt="">
+                                <div class="flex flex-col text-xs">
+                                    <p class="text-sm">Макарова Светлана</p>
+                                    <p>от 300 руб</p>
+                                    <div class="flex items-center gap-1.5">
+                                        <p class="text-[#F76B24]">Заказать</p>
+                                        <img src="Assets/Images/icons/arrow.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="border border-black w-[35px] h-[35px] flex items-center justify-center">
+                                <img src="Assets/Images/icons/play.svg" alt="">
+                            </button>
+                        </div>
+                        <div class="flex items-center px-4 py-1.5 justify-between border-[3px] border-[#827F7F] rounded-[20px]">
+                            <div class="flex items-center gap-6">
+                                <img src="Assets/Images/voices/1.png" alt="">
+                                <div class="flex flex-col text-xs">
+                                    <p class="text-sm">Макарова Светлана</p>
+                                    <p>от 300 руб</p>
+                                    <div class="flex items-center gap-1.5">
+                                        <p class="text-[#F76B24]">Заказать</p>
+                                        <img src="Assets/Images/icons/arrow.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="border border-black w-[35px] h-[35px] flex items-center justify-center">
+                                <img src="Assets/Images/icons/play.svg" alt="">
+                            </button>
+                        </div>
+                        <div class="flex items-center px-4 py-1.5 justify-between border-[3px] border-[#827F7F] rounded-[20px]">
+                            <div class="flex items-center gap-6">
+                                <img src="Assets/Images/voices/1.png" alt="">
+                                <div class="flex flex-col text-xs">
+                                    <p class="text-sm">Макарова Светлана</p>
+                                    <p>от 300 руб</p>
+                                    <div class="flex items-center gap-1.5">
+                                        <p class="text-[#F76B24]">Заказать</p>
+                                        <img src="Assets/Images/icons/arrow.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="border border-black w-[35px] h-[35px] flex items-center justify-center">
+                                <img src="Assets/Images/icons/play.svg" alt="">
+                            </button>
+                        </div>
+                        <div class="flex gap-2 items-center self-end">
+                            <p class="text-[#F76B24] text-base">Подробнее</p>
+                            <img src="Assets/Images/icons/arrow.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="w-full pb-2 border-b border-black flex items-end justify-between dropdown-toggler" type="button">
+                    <p class="text-xl text-left">Детские</p>
+                    <img src="Assets/Images/icons/dropdown.svg" alt="" class="transition-all duration-500 dropdown-img">
+                </button>
+                <div class="hidden dropdown-list">
+                    <div class="flex flex-col gap-2 mt-5">
+                        <div class="flex items-center px-4 py-1.5 justify-between border-[3px] border-[#827F7F] rounded-[20px]">
+                            <div class="flex items-center gap-6">
+                                <img src="Assets/Images/voices/1.png" alt="">
+                                <div class="flex flex-col text-xs">
+                                    <p class="text-sm">Макарова Светлана</p>
+                                    <p>от 300 руб</p>
+                                    <div class="flex items-center gap-1.5">
+                                        <p class="text-[#F76B24]">Заказать</p>
+                                        <img src="Assets/Images/icons/arrow.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="border border-black w-[35px] h-[35px] flex items-center justify-center">
+                                <img src="Assets/Images/icons/play.svg" alt="">
+                            </button>
+                        </div>
+                        <div class="flex items-center px-4 py-1.5 justify-between border-[3px] border-[#827F7F] rounded-[20px]">
+                            <div class="flex items-center gap-6">
+                                <img src="Assets/Images/voices/1.png" alt="">
+                                <div class="flex flex-col text-xs">
+                                    <p class="text-sm">Макарова Светлана</p>
+                                    <p>от 300 руб</p>
+                                    <div class="flex items-center gap-1.5">
+                                        <p class="text-[#F76B24]">Заказать</p>
+                                        <img src="Assets/Images/icons/arrow.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="border border-black w-[35px] h-[35px] flex items-center justify-center">
+                                <img src="Assets/Images/icons/play.svg" alt="">
+                            </button>
+                        </div>
+                        <div class="flex items-center px-4 py-1.5 justify-between border-[3px] border-[#827F7F] rounded-[20px]">
+                            <div class="flex items-center gap-6">
+                                <img src="Assets/Images/voices/1.png" alt="">
+                                <div class="flex flex-col text-xs">
+                                    <p class="text-sm">Макарова Светлана</p>
+                                    <p>от 300 руб</p>
+                                    <div class="flex items-center gap-1.5">
+                                        <p class="text-[#F76B24]">Заказать</p>
+                                        <img src="Assets/Images/icons/arrow.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="border border-black w-[35px] h-[35px] flex items-center justify-center">
+                                <img src="Assets/Images/icons/play.svg" alt="">
+                            </button>
+                        </div>
+                        <div class="flex gap-2 items-center self-end">
+                            <p class="text-[#F76B24] text-base">Подробнее</p>
+                            <img src="Assets/Images/icons/arrow.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="w-full pb-2 border-b border-black flex items-end justify-between dropdown-toggler" type="button">
+                    <p class="text-xl text-left">Пародисты</p>
+                    <img src="Assets/Images/icons/dropdown.svg" alt="" class="transition-all duration-500 dropdown-img">
+                </button>
+                <div class="hidden dropdown-list">
+                    <div class="flex flex-col gap-2 mt-5">
+                        <div class="flex items-center px-4 py-1.5 justify-between border-[3px] border-[#827F7F] rounded-[20px]">
+                            <div class="flex items-center gap-6">
+                                <img src="Assets/Images/voices/1.png" alt="">
+                                <div class="flex flex-col text-xs">
+                                    <p class="text-sm">Макарова Светлана</p>
+                                    <p>от 300 руб</p>
+                                    <div class="flex items-center gap-1.5">
+                                        <p class="text-[#F76B24]">Заказать</p>
+                                        <img src="Assets/Images/icons/arrow.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="border border-black w-[35px] h-[35px] flex items-center justify-center">
+                                <img src="Assets/Images/icons/play.svg" alt="">
+                            </button>
+                        </div>
+                        <div class="flex items-center px-4 py-1.5 justify-between border-[3px] border-[#827F7F] rounded-[20px]">
+                            <div class="flex items-center gap-6">
+                                <img src="Assets/Images/voices/1.png" alt="">
+                                <div class="flex flex-col text-xs">
+                                    <p class="text-sm">Макарова Светлана</p>
+                                    <p>от 300 руб</p>
+                                    <div class="flex items-center gap-1.5">
+                                        <p class="text-[#F76B24]">Заказать</p>
+                                        <img src="Assets/Images/icons/arrow.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="border border-black w-[35px] h-[35px] flex items-center justify-center">
+                                <img src="Assets/Images/icons/play.svg" alt="">
+                            </button>
+                        </div>
+                        <div class="flex items-center px-4 py-1.5 justify-between border-[3px] border-[#827F7F] rounded-[20px]">
+                            <div class="flex items-center gap-6">
+                                <img src="Assets/Images/voices/1.png" alt="">
+                                <div class="flex flex-col text-xs">
+                                    <p class="text-sm">Макарова Светлана</p>
+                                    <p>от 300 руб</p>
+                                    <div class="flex items-center gap-1.5">
+                                        <p class="text-[#F76B24]">Заказать</p>
+                                        <img src="Assets/Images/icons/arrow.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="border border-black w-[35px] h-[35px] flex items-center justify-center">
+                                <img src="Assets/Images/icons/play.svg" alt="">
+                            </button>
+                        </div>
+                        <div class="flex gap-2 items-center self-end">
+                            <p class="text-[#F76B24] text-base">Подробнее</p>
+                            <img src="Assets/Images/icons/arrow.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="w-full pb-2 border-b border-black flex items-end justify-between dropdown-toggler" type="button">
+                    <p class="text-xl text-left">Вокалисты</p>
+                    <img src="Assets/Images/icons/dropdown.svg" alt="" class="transition-all duration-500 dropdown-img">
+                </button>
+                <div class="hidden dropdown-list">
+                    <div class="flex flex-col gap-2 mt-5">
+                        <div class="flex items-center px-4 py-1.5 justify-between border-[3px] border-[#827F7F] rounded-[20px]">
+                            <div class="flex items-center gap-6">
+                                <img src="Assets/Images/voices/1.png" alt="">
+                                <div class="flex flex-col text-xs">
+                                    <p class="text-sm">Макарова Светлана</p>
+                                    <p>от 300 руб</p>
+                                    <div class="flex items-center gap-1.5">
+                                        <p class="text-[#F76B24]">Заказать</p>
+                                        <img src="Assets/Images/icons/arrow.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="border border-black w-[35px] h-[35px] flex items-center justify-center">
+                                <img src="Assets/Images/icons/play.svg" alt="">
+                            </button>
+                        </div>
+                        <div class="flex items-center px-4 py-1.5 justify-between border-[3px] border-[#827F7F] rounded-[20px]">
+                            <div class="flex items-center gap-6">
+                                <img src="Assets/Images/voices/1.png" alt="">
+                                <div class="flex flex-col text-xs">
+                                    <p class="text-sm">Макарова Светлана</p>
+                                    <p>от 300 руб</p>
+                                    <div class="flex items-center gap-1.5">
+                                        <p class="text-[#F76B24]">Заказать</p>
+                                        <img src="Assets/Images/icons/arrow.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="border border-black w-[35px] h-[35px] flex items-center justify-center">
+                                <img src="Assets/Images/icons/play.svg" alt="">
+                            </button>
+                        </div>
+                        <div class="flex items-center px-4 py-1.5 justify-between border-[3px] border-[#827F7F] rounded-[20px]">
+                            <div class="flex items-center gap-6">
+                                <img src="Assets/Images/voices/1.png" alt="">
+                                <div class="flex flex-col text-xs">
+                                    <p class="text-sm">Макарова Светлана</p>
+                                    <p>от 300 руб</p>
+                                    <div class="flex items-center gap-1.5">
+                                        <p class="text-[#F76B24]">Заказать</p>
+                                        <img src="Assets/Images/icons/arrow.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="border border-black w-[35px] h-[35px] flex items-center justify-center">
+                                <img src="Assets/Images/icons/play.svg" alt="">
+                            </button>
+                        </div>
+                        <div class="flex gap-2 items-center self-end">
+                            <p class="text-[#F76B24] text-base">Подробнее</p>
+                            <img src="Assets/Images/icons/arrow.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="w-full pb-2 border-b border-black flex items-end justify-between dropdown-toggler" type="button">
+                    <p class="text-xl text-left">Англоязычные дикторы</p>
+                    <img src="Assets/Images/icons/dropdown.svg" alt="" class="transition-all duration-500 dropdown-img">
+                </button>
+                <div class="hidden dropdown-list">
+                    <div class="flex flex-col gap-2 mt-5">
+                        <div class="flex items-center px-4 py-1.5 justify-between border-[3px] border-[#827F7F] rounded-[20px]">
+                            <div class="flex items-center gap-6">
+                                <img src="Assets/Images/voices/1.png" alt="">
+                                <div class="flex flex-col text-xs">
+                                    <p class="text-sm">Макарова Светлана</p>
+                                    <p>от 300 руб</p>
+                                    <div class="flex items-center gap-1.5">
+                                        <p class="text-[#F76B24]">Заказать</p>
+                                        <img src="Assets/Images/icons/arrow.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="border border-black w-[35px] h-[35px] flex items-center justify-center">
+                                <img src="Assets/Images/icons/play.svg" alt="">
+                            </button>
+                        </div>
+                        <div class="flex items-center px-4 py-1.5 justify-between border-[3px] border-[#827F7F] rounded-[20px]">
+                            <div class="flex items-center gap-6">
+                                <img src="Assets/Images/voices/1.png" alt="">
+                                <div class="flex flex-col text-xs">
+                                    <p class="text-sm">Макарова Светлана</p>
+                                    <p>от 300 руб</p>
+                                    <div class="flex items-center gap-1.5">
+                                        <p class="text-[#F76B24]">Заказать</p>
+                                        <img src="Assets/Images/icons/arrow.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="border border-black w-[35px] h-[35px] flex items-center justify-center">
+                                <img src="Assets/Images/icons/play.svg" alt="">
+                            </button>
+                        </div>
+                        <div class="flex items-center px-4 py-1.5 justify-between border-[3px] border-[#827F7F] rounded-[20px]">
+                            <div class="flex items-center gap-6">
+                                <img src="Assets/Images/voices/1.png" alt="">
+                                <div class="flex flex-col text-xs">
+                                    <p class="text-sm">Макарова Светлана</p>
+                                    <p>от 300 руб</p>
+                                    <div class="flex items-center gap-1.5">
+                                        <p class="text-[#F76B24]">Заказать</p>
+                                        <img src="Assets/Images/icons/arrow.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="border border-black w-[35px] h-[35px] flex items-center justify-center">
+                                <img src="Assets/Images/icons/play.svg" alt="">
+                            </button>
+                        </div>
+                        <div class="flex gap-2 items-center self-end">
+                            <p class="text-[#F76B24] text-base">Подробнее</p>
+                            <img src="Assets/Images/icons/arrow.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="w-full pb-2 border-b border-black flex items-end justify-between dropdown-toggler" type="button">
+                    <p class="text-xl text-left">Другие иностранные голоса</p>
+                    <img src="Assets/Images/icons/dropdown.svg" alt="" class="transition-all duration-500 dropdown-img">
+                </button>
+                <div class="hidden dropdown-list">
+                    <div class="flex flex-col gap-2 mt-5">
+                        <div class="flex items-center px-4 py-1.5 justify-between border-[3px] border-[#827F7F] rounded-[20px]">
+                            <div class="flex items-center gap-6">
+                                <img src="Assets/Images/voices/1.png" alt="">
+                                <div class="flex flex-col text-xs">
+                                    <p class="text-sm">Макарова Светлана</p>
+                                    <p>от 300 руб</p>
+                                    <div class="flex items-center gap-1.5">
+                                        <p class="text-[#F76B24]">Заказать</p>
+                                        <img src="Assets/Images/icons/arrow.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="border border-black w-[35px] h-[35px] flex items-center justify-center">
+                                <img src="Assets/Images/icons/play.svg" alt="">
+                            </button>
+                        </div>
+                        <div class="flex items-center px-4 py-1.5 justify-between border-[3px] border-[#827F7F] rounded-[20px]">
+                            <div class="flex items-center gap-6">
+                                <img src="Assets/Images/voices/1.png" alt="">
+                                <div class="flex flex-col text-xs">
+                                    <p class="text-sm">Макарова Светлана</p>
+                                    <p>от 300 руб</p>
+                                    <div class="flex items-center gap-1.5">
+                                        <p class="text-[#F76B24]">Заказать</p>
+                                        <img src="Assets/Images/icons/arrow.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="border border-black w-[35px] h-[35px] flex items-center justify-center">
+                                <img src="Assets/Images/icons/play.svg" alt="">
+                            </button>
+                        </div>
+                        <div class="flex items-center px-4 py-1.5 justify-between border-[3px] border-[#827F7F] rounded-[20px]">
+                            <div class="flex items-center gap-6">
+                                <img src="Assets/Images/voices/1.png" alt="">
+                                <div class="flex flex-col text-xs">
+                                    <p class="text-sm">Макарова Светлана</p>
+                                    <p>от 300 руб</p>
+                                    <div class="flex items-center gap-1.5">
+                                        <p class="text-[#F76B24]">Заказать</p>
+                                        <img src="Assets/Images/icons/arrow.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="border border-black w-[35px] h-[35px] flex items-center justify-center">
+                                <img src="Assets/Images/icons/play.svg" alt="">
+                            </button>
+                        </div>
+                        <div class="flex gap-2 items-center self-end">
+                            <p class="text-[#F76B24] text-base">Подробнее</p>
+                            <img src="Assets/Images/icons/arrow.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="w-full pb-2 border-b border-black flex items-end justify-between dropdown-toggler" type="button">
+                    <p class="text-xl text-left">Сценаристы</p>
+                    <img src="Assets/Images/icons/dropdown.svg" alt="" class="transition-all duration-500 dropdown-img">
+                </button>
+                <div class="hidden dropdown-list">
+                    <div class="flex flex-col gap-2 mt-5">
+                        <div class="flex items-center px-4 py-1.5 justify-between border-[3px] border-[#827F7F] rounded-[20px]">
+                            <div class="flex items-center gap-6">
+                                <img src="Assets/Images/voices/1.png" alt="">
+                                <div class="flex flex-col text-xs">
+                                    <p class="text-sm">Макарова Светлана</p>
+                                    <p>от 300 руб</p>
+                                    <div class="flex items-center gap-1.5">
+                                        <p class="text-[#F76B24]">Заказать</p>
+                                        <img src="Assets/Images/icons/arrow.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="border border-black w-[35px] h-[35px] flex items-center justify-center">
+                                <img src="Assets/Images/icons/play.svg" alt="">
+                            </button>
+                        </div>
+                        <div class="flex items-center px-4 py-1.5 justify-between border-[3px] border-[#827F7F] rounded-[20px]">
+                            <div class="flex items-center gap-6">
+                                <img src="Assets/Images/voices/1.png" alt="">
+                                <div class="flex flex-col text-xs">
+                                    <p class="text-sm">Макарова Светлана</p>
+                                    <p>от 300 руб</p>
+                                    <div class="flex items-center gap-1.5">
+                                        <p class="text-[#F76B24]">Заказать</p>
+                                        <img src="Assets/Images/icons/arrow.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="border border-black w-[35px] h-[35px] flex items-center justify-center">
+                                <img src="Assets/Images/icons/play.svg" alt="">
+                            </button>
+                        </div>
+                        <div class="flex items-center px-4 py-1.5 justify-between border-[3px] border-[#827F7F] rounded-[20px]">
+                            <div class="flex items-center gap-6">
+                                <img src="Assets/Images/voices/1.png" alt="">
+                                <div class="flex flex-col text-xs">
+                                    <p class="text-sm">Макарова Светлана</p>
+                                    <p>от 300 руб</p>
+                                    <div class="flex items-center gap-1.5">
+                                        <p class="text-[#F76B24]">Заказать</p>
+                                        <img src="Assets/Images/icons/arrow.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="border border-black w-[35px] h-[35px] flex items-center justify-center">
+                                <img src="Assets/Images/icons/play.svg" alt="">
+                            </button>
+                        </div>
+                        <div class="flex gap-2 items-center self-end">
+                            <p class="text-[#F76B24] text-base">Подробнее</p>
+                            <img src="Assets/Images/icons/arrow.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="w-full pb-2 border-b border-black flex items-end justify-between dropdown-toggler" type="button">
+                    <p class="text-xl text-left">Ролик "под ключ"</p>
+                    <img src="Assets/Images/icons/dropdown.svg" alt="" class="transition-all duration-500 dropdown-img">
+                </button>
+                <div class="hidden dropdown-list">
+                    <div class="flex flex-col gap-2 mt-5">
+                        <div class="flex items-center px-4 py-1.5 justify-between border-[3px] border-[#827F7F] rounded-[20px]">
+                            <div class="flex items-center gap-6">
+                                <img src="Assets/Images/voices/1.png" alt="">
+                                <div class="flex flex-col text-xs">
+                                    <p class="text-sm">Макарова Светлана</p>
+                                    <p>от 300 руб</p>
+                                    <div class="flex items-center gap-1.5">
+                                        <p class="text-[#F76B24]">Заказать</p>
+                                        <img src="Assets/Images/icons/arrow.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="border border-black w-[35px] h-[35px] flex items-center justify-center">
+                                <img src="Assets/Images/icons/play.svg" alt="">
+                            </button>
+                        </div>
+                        <div class="flex items-center px-4 py-1.5 justify-between border-[3px] border-[#827F7F] rounded-[20px]">
+                            <div class="flex items-center gap-6">
+                                <img src="Assets/Images/voices/1.png" alt="">
+                                <div class="flex flex-col text-xs">
+                                    <p class="text-sm">Макарова Светлана</p>
+                                    <p>от 300 руб</p>
+                                    <div class="flex items-center gap-1.5">
+                                        <p class="text-[#F76B24]">Заказать</p>
+                                        <img src="Assets/Images/icons/arrow.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="border border-black w-[35px] h-[35px] flex items-center justify-center">
+                                <img src="Assets/Images/icons/play.svg" alt="">
+                            </button>
+                        </div>
+                        <div class="flex items-center px-4 py-1.5 justify-between border-[3px] border-[#827F7F] rounded-[20px]">
+                            <div class="flex items-center gap-6">
+                                <img src="Assets/Images/voices/1.png" alt="">
+                                <div class="flex flex-col text-xs">
+                                    <p class="text-sm">Макарова Светлана</p>
+                                    <p>от 300 руб</p>
+                                    <div class="flex items-center gap-1.5">
+                                        <p class="text-[#F76B24]">Заказать</p>
+                                        <img src="Assets/Images/icons/arrow.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="border border-black w-[35px] h-[35px] flex items-center justify-center">
+                                <img src="Assets/Images/icons/play.svg" alt="">
+                            </button>
+                        </div>
+                        <div class="flex gap-2 items-center self-end">
+                            <p class="text-[#F76B24] text-base">Подробнее</p>
+                            <img src="Assets/Images/icons/arrow.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="mx-auto w-fit bg-[#F76B24] px-11 py-4 text-white rounded-[20px]">Оформить заказ</button>
+    </div>
+
+    <div class="w-full flex flex-col gap-[30px] pt-20 px-6">
+        <p class="text-2xl prata">Примеры и стоимость аудиопродукции</p>
+        <div class="flex flex-col gap-4">
+            <div class="dropdown">
+                <button class="w-full pb-2 border-b border-black flex items-end justify-between dropdown-toggler" type="button">
+                    <p class="text-xl text-left">Голос от 200 руб</p>
+                    <img src="Assets/Images/icons/dropdown.svg" alt="" class="transition-all duration-500 dropdown-img">
+                </button>
+                <div class="hidden dropdown-list">
+                    <div class="flex flex-col gap-2.5 mt-2.5">
+                        <audio src="Assets/Audio/Alex Attaryan - Wind.mp3" class="w-full h-[54px]" controls></audio>
+                        <audio src="Assets/Audio/Alex Attaryan - Wind.mp3" class="w-full h-[54px]" controls></audio>
+                        <audio src="Assets/Audio/Alex Attaryan - Wind.mp3" class="w-full h-[54px]" controls></audio>
+                        <audio src="Assets/Audio/Alex Attaryan - Wind.mp3" class="w-full h-[54px]" controls></audio>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="w-full pb-2 border-b border-black flex items-end justify-between dropdown-toggler" type="button">
+                    <p class="text-xl text-left">Информационный аудиролик от 1000</p>
+                    <img src="Assets/Images/icons/dropdown.svg" alt="" class="transition-all duration-500 dropdown-img">
+                </button>
+                <div class="hidden dropdown-list">
+                    <div class="flex flex-col gap-2.5 mt-2.5">
+                        <audio src="Assets/Audio/Alex Attaryan - Wind.mp3" class="w-full h-[54px]" controls></audio>
+                        <audio src="Assets/Audio/Alex Attaryan - Wind.mp3" class="w-full h-[54px]" controls></audio>
+                        <audio src="Assets/Audio/Alex Attaryan - Wind.mp3" class="w-full h-[54px]" controls></audio>
+                        <audio src="Assets/Audio/Alex Attaryan - Wind.mp3" class="w-full h-[54px]" controls></audio>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="w-full pb-2 border-b border-black flex items-end justify-between dropdown-toggler" type="button">
+                    <p class="text-xl text-left">Имиджевый аудиоролик от 1000</p>
+                    <img src="Assets/Images/icons/dropdown.svg" alt="" class="transition-all duration-500 dropdown-img">
+                </button>
+                <div class="hidden dropdown-list">
+                    <div class="flex flex-col gap-2.5 mt-2.5">
+                        <audio src="Assets/Audio/Alex Attaryan - Wind.mp3" class="w-full h-[54px]" controls></audio>
+                        <audio src="Assets/Audio/Alex Attaryan - Wind.mp3" class="w-full h-[54px]" controls></audio>
+                        <audio src="Assets/Audio/Alex Attaryan - Wind.mp3" class="w-full h-[54px]" controls></audio>
+                        <audio src="Assets/Audio/Alex Attaryan - Wind.mp3" class="w-full h-[54px]" controls></audio>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="w-full pb-2 border-b border-black flex items-end justify-between dropdown-toggler" type="button">
+                    <p class="text-xl text-left">Игровой аудиоролик от 1500</p>
+                    <img src="Assets/Images/icons/dropdown.svg" alt="" class="transition-all duration-500 dropdown-img">
+                </button>
+                <div class="hidden dropdown-list">
+                    <div class="flex flex-col gap-2.5 mt-2.5">
+                        <audio src="Assets/Audio/Alex Attaryan - Wind.mp3" class="w-full h-[54px]" controls></audio>
+                        <audio src="Assets/Audio/Alex Attaryan - Wind.mp3" class="w-full h-[54px]" controls></audio>
+                        <audio src="Assets/Audio/Alex Attaryan - Wind.mp3" class="w-full h-[54px]" controls></audio>
+                        <audio src="Assets/Audio/Alex Attaryan - Wind.mp3" class="w-full h-[54px]" controls></audio>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="w-full pb-2 border-b border-black flex items-end justify-between dropdown-toggler" type="button">
+                    <p class="text-xl text-left">Вокал от 200</p>
+                    <img src="Assets/Images/icons/dropdown.svg" alt="" class="transition-all duration-500 dropdown-img">
+                </button>
+                <div class="hidden dropdown-list">
+                    <div class="flex flex-col gap-2.5 mt-2.5">
+                        <audio src="Assets/Audio/Alex Attaryan - Wind.mp3" class="w-full h-[54px]" controls></audio>
+                        <audio src="Assets/Audio/Alex Attaryan - Wind.mp3" class="w-full h-[54px]" controls></audio>
+                        <audio src="Assets/Audio/Alex Attaryan - Wind.mp3" class="w-full h-[54px]" controls></audio>
+                        <audio src="Assets/Audio/Alex Attaryan - Wind.mp3" class="w-full h-[54px]" controls></audio>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="w-full pb-2 border-b border-black flex items-end justify-between dropdown-toggler" type="button">
+                    <p class="text-xl text-left">Вокальный ролик от 1600</p>
+                    <img src="Assets/Images/icons/dropdown.svg" alt="" class="transition-all duration-500 dropdown-img">
+                </button>
+                <div class="hidden dropdown-list">
+                    <div class="flex flex-col gap-2.5 mt-2.5">
+                        <audio src="Assets/Audio/Alex Attaryan - Wind.mp3" class="w-full h-[54px]" controls></audio>
+                        <audio src="Assets/Audio/Alex Attaryan - Wind.mp3" class="w-full h-[54px]" controls></audio>
+                        <audio src="Assets/Audio/Alex Attaryan - Wind.mp3" class="w-full h-[54px]" controls></audio>
+                        <audio src="Assets/Audio/Alex Attaryan - Wind.mp3" class="w-full h-[54px]" controls></audio>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="w-full pb-2 border-b border-black flex items-end justify-between dropdown-toggler" type="button">
+                    <p class="text-xl text-left">Пародия от 200</p>
+                    <img src="Assets/Images/icons/dropdown.svg" alt="" class="transition-all duration-500 dropdown-img">
+                </button>
+                <div class="hidden dropdown-list">
+                    <div class="flex flex-col gap-2.5 mt-2.5">
+                        <audio src="Assets/Audio/Alex Attaryan - Wind.mp3" class="w-full h-[54px]" controls></audio>
+                        <audio src="Assets/Audio/Alex Attaryan - Wind.mp3" class="w-full h-[54px]" controls></audio>
+                        <audio src="Assets/Audio/Alex Attaryan - Wind.mp3" class="w-full h-[54px]" controls></audio>
+                        <audio src="Assets/Audio/Alex Attaryan - Wind.mp3" class="w-full h-[54px]" controls></audio>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="w-full pb-2 border-b border-black flex items-end justify-between dropdown-toggler" type="button">
+                    <p class="text-xl text-left">Сценарий от 300</p>
+                    <img src="Assets/Images/icons/dropdown.svg" alt="" class="transition-all duration-500 dropdown-img">
+                </button>
+                <div class="hidden dropdown-list">
+                    <div class="flex flex-col gap-2.5 mt-2.5">
+                        <audio src="Assets/Audio/Alex Attaryan - Wind.mp3" class="w-full h-[54px]" controls></audio>
+                        <audio src="Assets/Audio/Alex Attaryan - Wind.mp3" class="w-full h-[54px]" controls></audio>
+                        <audio src="Assets/Audio/Alex Attaryan - Wind.mp3" class="w-full h-[54px]" controls></audio>
+                        <audio src="Assets/Audio/Alex Attaryan - Wind.mp3" class="w-full h-[54px]" controls></audio>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="mx-auto w-fit bg-[#F76B24] px-11 py-4 text-white rounded-[20px]">Оформить заказ</button>
+    </div>
+
+    <div class="w-full flex flex-col gap-9 py-20 px-6">
+        <p class="text-2xl prata">Способы оплаты</p>
+        <div class="grid grid-cols-3 gap-x-5 gap-y-3.5">
+            <a href="" class="flex items-center justify-center">
+                <img src="Assets/Images/payment/1.png" alt="">
+            </a>
+            <a href="" class="flex items-center justify-center">
+                <img src="Assets/Images/payment/2.png" alt="">
+            </a>
+            <a href="" class="flex items-center justify-center">
+                <img src="Assets/Images/payment/3.png" alt="">
+            </a>
+            <a href="" class="flex items-center justify-center">
+                <img src="Assets/Images/payment/4.png" alt="">
+            </a>
+            <a href="" class="flex items-center justify-center">
+                <img src="Assets/Images/payment/5.png" alt="">
+            </a>
+            <a href="" class="flex items-center justify-center">
+                <img src="Assets/Images/payment/6.png" alt="">
+            </a>
+        </div>
+    </div>
+
+    <footer class="w-full flex flex-col gap-4 bg-[#F0F0F0] px-6 pb-4 text-xs">
+        <div class="w-full flex items-center justify-between">
+            <a href="#"><img src="Assets/Images/header/logo.svg" alt=""></a>
+            <a href="tel:8 800 000 00 00">8 800 000 00 00</a>
+        </div>
+        <div class="grid grid-cols-2 gap-6">
+            <div class="flex flex-col gap-3">
+                <p class="text-sm">Магазин</p>
+                <div class="flex flex-col gap-1.5">
+                    <a href="">База дикторов</a>
+                    <a href="">Дикторы по популярности</a>
+                    <a href="Pages/rules.html">Правила сотрудничества</a>
+                    <a href="">Файлообменник</a>
+                </div>
+            </div>
+            <div class="flex flex-col gap-3">
+                <p class="text-sm">Покупка</p>
+                <div class="flex flex-col gap-1.5">
+                    <a href="">Купить</a>
+                    <a href="">Цены</a>
+                    <a href="">Рассчитать стоимость</a>
+                    <a href="">Как оплатить</a>
+                    <a href="">Скидки и бонусы</a>
+                </div>
+            </div>
+            <div class="flex flex-col gap-3">
+                <p class="text-sm">Компания</p>
+                <div class="flex flex-col gap-1.5">
+                    <a href="Pages/about.html">О нас</a>
+                    <a href="">Обратная связь</a>
+                    <a href="">Работа с нами</a>
+                    <a href="Pages/contacts.html">Контакты</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+	<script src="https://code.jquery.com/jquery-3.6.3.min.js" 
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+    crossorigin="anonymous"></script>
+	<script src="Assets/JS/custom.js"></script>
+</body>
+</html>
