@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Assets/CSS/custom.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Дикторы по популярности</title>
+</head>
+<body class="inter">
+    <header class="w-full px-6">
+        <div class="flex items-center justify-between pt-1 pb-px border-b border-black" id="nav">
+            <a href="../index.html"><img src="../Assets/Images/header/logo.svg" alt=""></a>
+            <div class="flex items-center gap-2.5">
+                <button>
+                    <img src="../Assets/Images/header/phone.svg" alt="">
+                </button>
+                <button>
+                    <img src="../Assets/Images/header/chat.svg" alt="">
+                </button>
+                <button type="button" class="relative h-6 w-6" id="toggler">
+                    <img src="../Assets/Images/header/menu.svg" alt="" class="absolute top-0 left-0">
+                    <img src="../Assets/Images/header/close.svg" alt="" class="absolute top-0 left-0 hidden">
+                </button>
+            </div>
+        </div>
+    </header>  
+    <div class="w-full px-6 left-0 absolute top-auto z-50 pt-4 pb-[137px] flex flex-col bg-[#F0F0F0] inter text-xl transition-all duration-500 -translate-y-[calc(100%+43px)]" id="menu">
+        <button class="bg-[#F76B24] pl-4 pr-3 py-3 text-white self-end rounded-[20px]">Вход и регистрация</button>
+        <div class="dropdown">
+            <button class="w-full pb-2 border-b border-black flex items-end justify-between mt-9 dropdown-toggler" type="button">
+                <span>База дикторов</span>
+                <img src="../Assets/Images/icons/dropdown.svg" alt="" class="transition-all duration-500 dropdown-img">
+            </button>
+            <div class="hidden dropdown-list">
+                <div class="flex flex-col text-base gap-2.5 mt-2.5 text-[#616060]">
+                    <a href="#" class="pb-1 border-b border-[#79838B] px-6 w-full">Дикторский голос</a>
+                    <a href="" class="pb-1 border-b border-[#79838B] px-6 w-full">Аудиоролик</a>
+                    <a href="" class="pb-1 border-b border-[#79838B] px-6 w-full">Вокал</a>
+                    <a href="" class="pb-1 border-b border-[#79838B] px-6 w-full">Пародия</a>
+                    <a href="" class="pb-1 border-b border-[#79838B] px-6 w-full">Сценарий</a>
+                </div>
+            </div>
+        </div>
+        <div class="dropdown">            
+            <button class="w-full pb-2 border-b border-black flex items-end justify-between pt-4 dropdown-toggler" type="button">
+                <span>Купить</span>
+                <img src="../Assets/Images/icons/dropdown.svg" alt="" class="transition-all duration-500 dropdown-img">
+            </button>
+            <div class="hidden dropdown-list">
+                <div class="flex flex-col text-base gap-2.5 mt-2.5 text-[#616060]">
+                    <a href="" class="pb-1 border-b border-[#79838B] px-6 w-full">Дикторский голос</a>
+                    <a href="" class="pb-1 border-b border-[#79838B] px-6 w-full">Аудиоролик</a>
+                    <a href="" class="pb-1 border-b border-[#79838B] px-6 w-full">Вокал</a>
+                    <a href="" class="pb-1 border-b border-[#79838B] px-6 w-full">Пародия</a>
+                    <a href="" class="pb-1 border-b border-[#79838B] px-6 w-full">Сценарий</a>
+                </div>
+            </div>
+        </div>
+        <a href="" class="w-full pb-2 border-b border-black pt-4">Цены</a>
+        <a href="" class="w-full pb-2 border-b border-black pt-4">Дикторы по популярности</a>
+        <a href="" class="w-full pb-2 border-b border-black pt-4">Рассчитать стоимость</a>
+        <a href="" class="w-full pb-2 border-b border-black pt-4">Контакты</a>
+        <a href="tel:8 800 000 00 00" class="pt-10">8 800 000 00 00 </a>
+    </div>
+
+    <div class="w-full px-6 pt-1 flex gap-1 text-[10px] text-[#827F7F]">
+        <a href="../index.html">Главная</a>
+        <p>/</p>
+        <p>Дикторы по популярности</p>
+    </div>
+
+    <div class="w-full px-6 pt-3 flex flex-col gap-5 pb-[50px]">
+        <p class="text-xl prata">Дикторы по популярности</p>
+        <div class="flex items-center gap-2.5 mb-2">
+            <input type="radio" name="" id="" class="w-[22px] h-[22px]">
+            <p class="text-sm text-[#79838B]">Только online</p>
+        </div>        
+        <div class="flex flex-col border-[3px] border-[#827F7F] px-5 pb-2 rounded-[20px] gap-1">
+            <div class="flex items-center gap-8">
+                <img src="../Assets/Images/voices/1.png" alt="">
+                <div class="flex flex-col text-xs">
+                    <p class="text-sm">Макарова Светлана</p>
+                    <div class="flex items-center gap-2.5">
+                        <div class="flex gap-px">
+                            <img src="../Assets/Images/icons/like.svg" alt="">
+                            <p>309</p>
+                        </div>
+                        <p>от 350 руб</p>
+                    </div>
+                </div>
+            </div>
+            <audio src="../Assets/Audio/Alex Attaryan - Wind.mp3" controls class="w-full"></audio>
+            <audio src="../Assets/Audio/Alex Attaryan - Wind.mp3" controls class="w-full"></audio>
+            <div class="flex items-end justify-between mt-1">
+                <div class="flex flex-col text-xs text-[#79838B]">
+                    <div class="flex gap-2.5">
+                        <p class="w-[109px]">Успешных заказов</p>
+                        <p>100%</p>
+                    </div>
+                    <div class="flex gap-2.5">
+                        <p class="w-[109px]">Кол-во заказов</p>
+                        <p>>100</p>
+                    </div>
+                    <div class="flex gap-2.5">
+                        <p class="w-[109px]">Срок записи</p>
+                        <p>1 час</p>
+                    </div>
+                    <div class="flex gap-2.5">
+                        <p class="w-[109px]">Чистка начитки:</p>
+                        <p>50%</p>
+                    </div>
+                </div>
+                <div class="flex gap-1.5">
+                    <p class="text-[#F76B24] text-xs">Заказать</p>
+                    <img src="../Assets/Images/icons/arrow.svg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-col border-[3px] border-[#827F7F] px-5 pb-2 rounded-[20px] gap-1">
+            <div class="flex items-center gap-8">
+                <img src="../Assets/Images/voices/1.png" alt="">
+                <div class="flex flex-col text-xs">
+                    <p class="text-sm">Макарова Светлана</p>
+                    <div class="flex items-center gap-2.5">
+                        <div class="flex gap-px">
+                            <img src="../Assets/Images/icons/like.svg" alt="">
+                            <p>309</p>
+                        </div>
+                        <p>от 350 руб</p>
+                    </div>
+                </div>
+            </div>
+            <audio src="../Assets/Audio/Alex Attaryan - Wind.mp3" controls class="w-full"></audio>
+            <audio src="../Assets/Audio/Alex Attaryan - Wind.mp3" controls class="w-full"></audio>
+            <div class="flex items-end justify-between mt-1">
+                <div class="flex flex-col text-xs text-[#79838B]">
+                    <div class="flex gap-2.5">
+                        <p class="w-[109px]">Успешных заказов</p>
+                        <p>100%</p>
+                    </div>
+                    <div class="flex gap-2.5">
+                        <p class="w-[109px]">Кол-во заказов</p>
+                        <p>>100</p>
+                    </div>
+                    <div class="flex gap-2.5">
+                        <p class="w-[109px]">Срок записи</p>
+                        <p>1 час</p>
+                    </div>
+                    <div class="flex gap-2.5">
+                        <p class="w-[109px]">Чистка начитки:</p>
+                        <p>50%</p>
+                    </div>
+                </div>
+                <div class="flex gap-1.5">
+                    <p class="text-[#F76B24] text-xs">Заказать</p>
+                    <img src="../Assets/Images/icons/arrow.svg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-col border-[3px] border-[#827F7F] px-5 pb-2 rounded-[20px] gap-1">
+            <div class="flex items-center gap-8">
+                <img src="../Assets/Images/voices/1.png" alt="">
+                <div class="flex flex-col text-xs">
+                    <p class="text-sm">Макарова Светлана</p>
+                    <div class="flex items-center gap-2.5">
+                        <div class="flex gap-px">
+                            <img src="../Assets/Images/icons/like.svg" alt="">
+                            <p>309</p>
+                        </div>
+                        <p>от 350 руб</p>
+                    </div>
+                </div>
+            </div>
+            <audio src="../Assets/Audio/Alex Attaryan - Wind.mp3" controls class="w-full"></audio>
+            <audio src="../Assets/Audio/Alex Attaryan - Wind.mp3" controls class="w-full"></audio>
+            <div class="flex items-end justify-between mt-1">
+                <div class="flex flex-col text-xs text-[#79838B]">
+                    <div class="flex gap-2.5">
+                        <p class="w-[109px]">Успешных заказов</p>
+                        <p>100%</p>
+                    </div>
+                    <div class="flex gap-2.5">
+                        <p class="w-[109px]">Кол-во заказов</p>
+                        <p>>100</p>
+                    </div>
+                    <div class="flex gap-2.5">
+                        <p class="w-[109px]">Срок записи</p>
+                        <p>1 час</p>
+                    </div>
+                    <div class="flex gap-2.5">
+                        <p class="w-[109px]">Чистка начитки:</p>
+                        <p>50%</p>
+                    </div>
+                </div>
+                <div class="flex gap-1.5">
+                    <p class="text-[#F76B24] text-xs">Заказать</p>
+                    <img src="../Assets/Images/icons/arrow.svg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-col border-[3px] border-[#827F7F] px-5 pb-2 rounded-[20px] gap-1">
+            <div class="flex items-center gap-8">
+                <img src="../Assets/Images/voices/1.png" alt="">
+                <div class="flex flex-col text-xs">
+                    <p class="text-sm">Макарова Светлана</p>
+                    <div class="flex items-center gap-2.5">
+                        <div class="flex gap-px">
+                            <img src="../Assets/Images/icons/like.svg" alt="">
+                            <p>309</p>
+                        </div>
+                        <p>от 350 руб</p>
+                    </div>
+                </div>
+            </div>
+            <audio src="../Assets/Audio/Alex Attaryan - Wind.mp3" controls class="w-full"></audio>
+            <audio src="../Assets/Audio/Alex Attaryan - Wind.mp3" controls class="w-full"></audio>
+            <div class="flex items-end justify-between mt-1">
+                <div class="flex flex-col text-xs text-[#79838B]">
+                    <div class="flex gap-2.5">
+                        <p class="w-[109px]">Успешных заказов</p>
+                        <p>100%</p>
+                    </div>
+                    <div class="flex gap-2.5">
+                        <p class="w-[109px]">Кол-во заказов</p>
+                        <p>>100</p>
+                    </div>
+                    <div class="flex gap-2.5">
+                        <p class="w-[109px]">Срок записи</p>
+                        <p>1 час</p>
+                    </div>
+                    <div class="flex gap-2.5">
+                        <p class="w-[109px]">Чистка начитки:</p>
+                        <p>50%</p>
+                    </div>
+                </div>
+                <div class="flex gap-1.5">
+                    <p class="text-[#F76B24] text-xs">Заказать</p>
+                    <img src="../Assets/Images/icons/arrow.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="w-full flex flex-col gap-4 bg-[#F0F0F0] px-6 pb-4 text-xs">
+        <div class="w-full flex items-center justify-between">
+            <a href="../index.html"><img src="../Assets/Images/header/logo.svg" alt=""></a>
+            <a href="tel:8 800 000 00 00">8 800 000 00 00</a>
+        </div>
+        <div class="grid grid-cols-2 gap-6">
+            <div class="flex flex-col gap-3">
+                <p class="text-sm">Магазин</p>
+                <div class="flex flex-col gap-1.5">
+                    <a href="">База дикторов</a>
+                    <a href="">Дикторы по популярности</a>
+                    <a href="">Правила сотрудничества</a>
+                    <a href="">Файлообменник</a>
+                </div>
+            </div>
+            <div class="flex flex-col gap-3">
+                <p class="text-sm">Покупка</p>
+                <div class="flex flex-col gap-1.5">
+                    <a href="">Купить</a>
+                    <a href="">Цены</a>
+                    <a href="">Рассчитать стоимость</a>
+                    <a href="">Как оплатить</a>
+                    <a href="">Скидки и бонусы</a>
+                </div>
+            </div>
+            <div class="flex flex-col gap-3">
+                <p class="text-sm">Компания</p>
+                <div class="flex flex-col gap-1.5">
+                    <a href="">О нас</a>
+                    <a href="">Обратная связь</a>
+                    <a href="">Работа с нами</a>
+                    <a href="#">Контакты</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+	<script src="https://code.jquery.com/jquery-3.6.3.min.js" 
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+    crossorigin="anonymous"></script>
+	<script src="../Assets/JS/custom.js"></script>
+</body>
+</html>

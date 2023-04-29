@@ -53,3 +53,7 @@ $("#close_reg, #overlay_reg").click(()=>{
   $("body").toggleClass("overflow-hidden");
 });
 
+/* tabs */
+$( function() {
+  $( "#tabs-work" ).tabs();
+} );
