@@ -30,16 +30,21 @@ $("#filters").click(()=>{
 
 /* files */
 let m = [];
-$("#file").change(()=>{
-  for (let i = 0; i < $("#file")[0].files.length; i++) {
-    let j = $("#file")[0].files[i].name;
-    m.push(j);
-    let str = m.join(", ");
-    $("#files").html(`Выбранные файлы: ${str}`);  
-    $("#files").removeClass("hidden");
-  }
-  m = []; 
+$(".uploading").each((i,el) => { 
+  let uploading_file = $(el).find(".file");
+  let p_files = $(el).find(".files");
+  uploading_file.change(()=>{
+    for (let i = 0; i < uploading_file[0].files.length; i++) {
+      let j = uploading_file[0].files[i].name;
+      m.push(j);
+      let str = m.join(", ");
+      p_files.html(`Выбранные файлы: ${str}`);  
+      p_files.removeClass("hidden");
+    }
+    m = []; 
+  });
 });
+
 
 /* registratiion */
 $("#sign").click(()=>{

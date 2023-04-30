@@ -84,15 +84,17 @@
         <textarea class="py-4 px-6 border-2 border-[#8C8B8B] rounded-[20px] h-40" placeholder="Текст сообщения"></textarea>
         <div class="flex flex-col gap-2.5">
             <p class="text-sm">Файлы</p>
-            <input type="file" name="" id="file" multiple class="hidden" accept=".jpg,.jpeg,.png,.pdf,.tiff,.bmp">
-            <div class="flex flex-col gap-4">
-                <label for="file" class="flex gap-1.5 items-center text-[#827F7F]">
-                    <p class="text-sm">Добавить</p>
-                    <img src="../Assets/Images/icons/plus_add.svg" alt="">
-                </label>
-                <p class="flex flex-wrap text-[#827F7F] text-sm hidden" id="files"></p>
+            <div class="flex flex-col gap-2.5 uploading">
+                <input type="file" name="" id="file" multiple class="hidden file" accept=".jpg,.jpeg,.png,.pdf,.tiff,.bmp">
+                <div class="flex flex-col gap-4">
+                    <label for="file" class="flex gap-1.5 items-center text-[#827F7F]">
+                        <p class="text-sm">Добавить</p>
+                        <img src="../Assets/Images/icons/plus_add.svg" alt="">
+                    </label>
+                    <p class="flex flex-wrap text-[#827F7F] text-sm hidden files"></p>
+                </div>
+                <p class="w-full text-[#827F7F] text-[10px]">Вы можете прикрепить файлы в формате jpg, jpeg, png, pdf, tiff, bmp. Размером не более 5 Мб</p>
             </div>
-            <p class="w-full text-[#827F7F] text-[10px]">Вы можете прикрепить файлы в формате jpg, jpeg, png, pdf, tiff, bmp. Размером не более 5 Мб</p>
             <div class="grid grid-cols-2 gap-5 text-sm">
                 <input type="text" class="py-4 px-6 border-2 border-[#8C8B8B] rounded-[20px]" placeholder="Код с картинки">
                 <input type="text" class="py-4 px-6 border-2 border-[#8C8B8B]">
