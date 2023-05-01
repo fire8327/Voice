@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Assets/CSS/custom.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Заказ начитки диктора</title>
+</head>
+<body class="inter">
+    <header class="w-full px-6">
+        <div class="flex items-center justify-between pt-1 pb-px border-b border-black" id="nav">
+            <a href="../index.html"><img src="../Assets/Images/header/logo.svg" alt=""></a>
+            <div class="flex items-center gap-2.5">
+                <button>
+                    <img src="../Assets/Images/header/phone.svg" alt="">
+                </button>
+                <button>
+                    <img src="../Assets/Images/header/chat.svg" alt="">
+                </button>
+                <button type="button" class="relative h-6 w-6" id="toggler">
+                    <img src="../Assets/Images/header/menu.svg" alt="" class="absolute top-0 left-0">
+                    <img src="../Assets/Images/header/close.svg" alt="" class="absolute top-0 left-0 hidden">
+                </button>
+            </div>
+        </div>
+    </header>  
+    <div class="w-full px-6 left-0 absolute top-auto z-50 pt-4 pb-[137px] flex flex-col bg-[#F0F0F0] inter text-xl transition-all duration-500 -translate-y-[calc(100%+43px)]" id="menu">
+        <button class="bg-[#F76B24] pl-4 pr-3 py-3 text-white self-end rounded-[20px]">Вход и регистрация</button>
+        <div class="dropdown">
+            <button class="w-full pb-2 border-b border-black flex items-end justify-between mt-9 dropdown-toggler" type="button">
+                <span>База дикторов</span>
+                <img src="../Assets/Images/icons/dropdown.svg" alt="" class="transition-all duration-500 dropdown-img">
+            </button>
+            <div class="hidden dropdown-list">
+                <div class="flex flex-col text-base gap-2.5 mt-2.5 text-[#616060]">
+                    <a href="#" class="pb-1 border-b border-[#79838B] px-6 w-full">Дикторский голос</a>
+                    <a href="" class="pb-1 border-b border-[#79838B] px-6 w-full">Аудиоролик</a>
+                    <a href="" class="pb-1 border-b border-[#79838B] px-6 w-full">Вокал</a>
+                    <a href="" class="pb-1 border-b border-[#79838B] px-6 w-full">Пародия</a>
+                    <a href="" class="pb-1 border-b border-[#79838B] px-6 w-full">Сценарий</a>
+                </div>
+            </div>
+        </div>
+        <div class="dropdown">            
+            <button class="w-full pb-2 border-b border-black flex items-end justify-between pt-4 dropdown-toggler" type="button">
+                <span>Купить</span>
+                <img src="../Assets/Images/icons/dropdown.svg" alt="" class="transition-all duration-500 dropdown-img">
+            </button>
+            <div class="hidden dropdown-list">
+                <div class="flex flex-col text-base gap-2.5 mt-2.5 text-[#616060]">
+                    <a href="" class="pb-1 border-b border-[#79838B] px-6 w-full">Дикторский голос</a>
+                    <a href="" class="pb-1 border-b border-[#79838B] px-6 w-full">Аудиоролик</a>
+                    <a href="" class="pb-1 border-b border-[#79838B] px-6 w-full">Вокал</a>
+                    <a href="" class="pb-1 border-b border-[#79838B] px-6 w-full">Пародия</a>
+                    <a href="" class="pb-1 border-b border-[#79838B] px-6 w-full">Сценарий</a>
+                </div>
+            </div>
+        </div>
+        <a href="" class="w-full pb-2 border-b border-black pt-4">Цены</a>
+        <a href="" class="w-full pb-2 border-b border-black pt-4">Дикторы по популярности</a>
+        <a href="" class="w-full pb-2 border-b border-black pt-4">Рассчитать стоимость</a>
+        <a href="" class="w-full pb-2 border-b border-black pt-4">Контакты</a>
+        <a href="tel:8 800 000 00 00" class="pt-10">8 800 000 00 00 </a>
+    </div>
+
+    <div class="w-full px-6 pt-1 flex gap-1 text-[10px] text-[#827F7F]">
+        <a href="../index.html">Главная</a>
+        <p>/</p>
+        <p>Заказ начитки диктора</p>
+    </div>
+
+    <div class="w-full px-6 pt-3 flex flex-col gap-5 pb-[50px]">
+        <div class="flex flex-col gap-1">
+            <p class="text-xl prata">Купить</p>
+            <div class="grid grid-cols-3 gap-x-1 gap-y-2.5 text-sm">
+                <div class="grid grid-cols-2 gap-5 col-span-full">
+                    <a href="" class="rounded-[10px] py-1.5 flex items-center justify-center border border-[#F76B24] text-white bg-[#F76B24]">Начитка диктора</a>
+                    <a href="" class="rounded-[10px] py-1.5 flex items-center justify-center border border-[#79838B]">Аудиоролик</a>
+                </div>
+                <a href="" class="rounded-[10px] py-1.5 flex items-center justify-center border border-[#79838B]">Вокал</a>
+                <a href="" class="rounded-[10px] py-1.5 flex items-center justify-center border border-[#79838B]">Сценарий</a>
+                <a href="" class="rounded-[10px] py-1.5 flex items-center justify-center border border-[#79838B]">Пародия</a>
+            </div>
+        </div>
+        <div class="flex flex-col gap-2.5">
+            <p class="prata">Заказ начитки диктора</p>
+            <div class="flex flex-col gap-1">
+                <input type="text" class="py-1 px-2.5 border border-[#79838B] rounded-[10px] text-sm" placeholder="Придумайте название заказа">
+                <p class="text-[10px] text-[#79838B]">Будет отображаться в счетах и отчетах, максимум 35 символов</p>
+            </div>
+        </div>
+        <div class="flex flex-col gap-2.5">
+            <p class="prata">Заказ начитки диктора</p>
+            <div class="grid grid-cols-3 gap-1 text-xs">                
+                <input type="radio" name="voice" class="hidden custom-radio" id="man">
+                <label for="man" class="rounded-[10px] py-1.5 flex items-center justify-center border border-[#79838B]">Мужской</label>
+                <input type="radio" name="voice" class="hidden custom-radio" id="woman">
+                <label for="woman" class="rounded-[10px] py-1.5 flex items-center justify-center border border-[#79838B]">Женский</label>
+                <input type="radio" name="voice" class="hidden custom-radio" id="kid">
+                <label for="kid" class="rounded-[10px] py-1.5 flex items-center justify-center border border-[#79838B]">Детский</label>
+            </div>
+            <div class="flex items-center gap-2.5">
+                <input type="radio" name="" id="" class="w-[22px] h-[22px]">
+                <p class="text-xs">Показывать только online</p>
+            </div>
+        </div>
+        <input type="text" list="dictors" class="rounded-[10px] border border-[#79838B] py-2 px-2.5 text-xs" placeholder="Введите имя диктора или выберите из списка">
+        <datalist id="dictors" class="w-full">
+            <option value="Диктор 1"></option>
+            <option value="Диктор 2"></option>
+            <option value="Диктор 3"></option>
+            <option value="Диктор 4"></option>
+            <option value="Диктор 5"></option>
+        </datalist>
+        <div class="flex flex-col gap-2.5 mt-2.5">
+            <textarea name="" id="" class="p-2 border border-[#79838B] rounded-[10px] text-sm resize-none h-[100px]" placeholder="Текст начитки"></textarea>
+            <div class="dropdown">
+                <button class="w-full pb-1 border-b border-[#79838B] flex items-end justify-between dropdown-toggler" type="button">
+                    <p class="text-xs text-left text-[#F76B24]">Важно!</p>
+                    <img src="../Assets/Images/icons/dropdown.svg" alt="" class="transition-all duration-500 dropdown-img">
+                </button>
+                <div class="hidden dropdown-list">
+                    <p class="text-[10px] text-[#79838B]">Введите текст начитки для диктора (без комментариев), хронометраж и стоимость заказа рассчитаются автоматически исходя из объма текста. <br> Если вы оформляете несколько текстов в одном заказе, то обязательно отметьте пунк “Рассчитать вручную” для расчета модератором цены за все тексты. <br> Уточните где ставить ударения в сложных словах заглАвными бУквами. <br> Важно! Все слова на латинице (при заказе текстов на русском языке) расшифровать в комментариях.</p>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="w-full pb-1 border-b border-[#79838B] flex items-end justify-between dropdown-toggler" type="button">
+                    <p class="text-xs text-left text-[#F76B24]">Пример</p>
+                    <img src="../Assets/Images/icons/dropdown.svg" alt="" class="transition-all duration-500 dropdown-img">
+                </button>
+                <div class="hidden dropdown-list">
+                    <p class="text-[10px] text-[#79838B]">Покупайте куртку летом, а дубленочку-весной! <br> ”СтЭлла РОсса” ждет всех модниц - чтобы щеголять зимой!!! <br> В салоне кожи и меха “СтЭлла-РОсса” - ликвидация весенне-зимней коллекции! С одиннадцотого апреля по одиннадцатое июня - со скидкой пятьдесят процентов!!! Ул.Советская, двенадцать! Звоните: тридцать восемь - тридцать восемь - тридцать восемь</p>
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-col gap-2.5 mt-2.5">
+            <textarea name="" id="" class="p-2 border border-[#79838B] rounded-[10px] text-sm resize-none h-[100px]" placeholder="Комментарии к тексту (рекомендуем заполнить)"></textarea>
+            <div class="dropdown">
+                <button class="w-full pb-1 border-b border-[#79838B] flex items-end justify-between dropdown-toggler" type="button">
+                    <p class="text-xs text-left text-[#F76B24]">Пример</p>
+                    <img src="../Assets/Images/icons/dropdown.svg" alt="" class="transition-all duration-500 dropdown-img">
+                </button>
+                <div class="hidden dropdown-list">
+                    <p class="text-[10px] text-[#79838B]">Просим сделать 3 варианта прочтения - интонации:  <br> 1. Деловой стиль, уверенно <br> 2.Активно, бодро, коротко <br> 3.Просто-просто</p>
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-col gap-1">
+            <div class="flex items-center gap-2.5">
+                <input type="radio" class="w-[22px] h-[22px]">
+                <p class="text-xs">Озвучивание видео/синхронизация (+70% к стоимости)</p>
+            </div>
+            <p class="text-[10px] text-[#79838B]">Попадайте в отведенные временные рамки (тайминг)</p> 
+        </div>
+        <div class="flex flex-col gap-1">
+            <div class="flex items-center gap-2.5">
+                <input type="radio" class="w-[22px] h-[22px]">
+                <p class="text-xs">Начитка будет дубляжем видео (+100% к стоимости)</p>
+            </div>
+            <p class="text-[10px] text-[#79838B]">Попадайте в губы актера)</p> 
+        </div>
+        <div class="flex flex-col gap-1">
+            <div class="flex items-center gap-2.5">
+                <input type="radio" class="w-[22px] h-[22px]">
+                <p class="text-xs">Почистить начитку (+20% к стоимости)</p>
+            </div>
+            <p class="text-[10px] text-[#79838B]">Диктор уберет ошибки, лишние повторения и оставит несколько дублей, готовых для подстановки в ролик. При заказе готового ролика у нас - чистку начитки выполнить наш монтажер)</p> 
+        </div>
+        <div class="flex flex-col gap-1">
+            <div class="flex items-center gap-2.5">
+                <input type="radio" class="w-[22px] h-[22px]">
+                <p class="text-xs">Срочный заказ (+50% к стоимости)</p>
+            </div>
+            <p class="text-[10px] text-[#79838B]">Диктор получит пометку, что заказ срочный, и по возможности, выполнит его быстрее.
+                Срок выполнения заказа выставляется автоматически в зависимости от выбранного диктора. Обязательно учитывайте, когда диктор будет Online и Offline. Если он не уложиться в срок, заказ аннулируется. Принят ли заказ в работу, можно узнать в Личном кабинете.)</p> 
+        </div>
+        <div class="mt-[10px] flex flex-col gap-2">
+            <div class="flex flex-col gap-2.5 uploading">
+                <input type="file" name="" id="file" multiple class="hidden file" accept=".mp3,.wav">
+                <div class="flex flex-col gap-2.5">
+                    <label for="file" class="flex gap-1.5 items-center text-[#827F7F]">
+                        <p class="text-sm">Добавить</p>
+                        <img src="../Assets/Images/icons/plus_add.svg" alt="">
+                    </label>
+                    <p class="flex flex-wrap text-[#827F7F] text-sm hidden files"></p>
+                </div>
+                <p class="w-full text-[#827F7F] text-[10px]">Звуковой файл mp3 или wav. <br> Размером не более 20 Мб</p>
+            </div>
+        </div>
+        <div class="flex flex-col gap-1">            
+            <input type="text" list="text-type" class="rounded-[10px] border border-[#79838B] py-2 px-2.5 text-xs mt-[10px]" placeholder="Тип текста">
+            <datalist id="text-type" class="w-full">
+                <option value="Текст 1"></option>
+                <option value="Текст 2"></option>
+                <option value="Текст 3"></option>
+                <option value="Текст 4"></option>
+                <option value="Текст 5"></option>
+            </datalist>
+            <div class="dropdown">
+                <button class="w-full pb-1 border-b border-[#79838B] flex items-end justify-between dropdown-toggler" type="button">
+                    <p class="text-xs text-left text-[#F76B24]">Важно!</p>
+                    <img src="../Assets/Images/icons/dropdown.svg" alt="" class="transition-all duration-500 dropdown-img">
+                </button>
+                <div class="hidden dropdown-list">
+                    <p class="text-[10px] text-[#79838B]">Для некоторых типов текста стоимость рассчитывается модератором: <br>
+                        1. Рекламный - обычная начитка, рекламного ролика. Рекламный ролик идет без наценки. <br>
+                        2. Политический - выборы и т.п. - коэффициент наценки 2. <br>
+                        3. Оформления эфира - джинглы, лайнеры диджеев, одежда эфира и прочее.- коэффициент наценки 2. <br>
+                        4. Дубляж видео - “озвучивание в губы” - коэффициент наценки 2. <br>
+                        5. Озвучивание видео/ синхронизация - когда диктор читает текст, опираясь на присланный видеофайл, и попадает в отведенные временные рамки (тайминг).
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="flex items-center gap-2.5 mt-[10px]">
+            <input type="radio" class="w-[22px] h-[22px] shrink-0">
+            <p class="text-xs text-[#79838B]">Разрешаю использовать заказ в портфолио проекта “Голос диктора”</p>
+        </div>
+        <div class="flex items-center gap-2.5 mt-[10px]">
+            <input type="radio" class="w-[22px] h-[22px] shrink-0">
+            <p class="text-xs text-[#79838B]">Автопродление заказа при истечении сроков</p>
+        </div>
+        <div class="flex flex-col gap-2 mt-[10px]">
+            <div class="flex items-center gap-5">
+                <input type="text" class="border border-[#79838B] rounded-[10px] py-2 w-40 text-center" value="0">
+                <p class="text-xs">Хронометраж, <br> в секундах</p>
+            </div>
+            <div class="flex items-center gap-5">
+                <input type="text" class="border border-[#79838B] rounded-[10px] py-2 w-40 text-center" value="0">
+                <p class="text-xs">Срок выполнения, <br> в часах</p>
+            </div>
+            <div class="flex items-center gap-5">
+                <input type="text" class="border border-[#79838B] rounded-[10px] py-2 w-40 text-center" value="0">
+                <p class="text-xs">Общая стоимость, <br> в рублях</p>
+            </div>
+            <div class="flex flex-col gap-1">
+                <div class="flex items-center gap-2.5">
+                    <input type="radio" class="w-[22px] h-[22px] shrink-0">
+                    <p class="text-xs">Рассчитать стоимость вручную</p>
+                </div>
+                <p class="text-[#79838B] text-[10px]">Если вы не согласны с ценой или оформляете несколько текстов в одном заказе, можете отправить заказ на оценку модератору. Эта процедура займет от 10 минут до 2 часов</p>
+            </div>
+        </div>
+        <button class="text-white bg-[#F76B24] rounded-[20px] px-10 py-3 w-fit mx-auto">Оформить заказ</button>
+    </div>
+
+    <footer class="w-full flex flex-col gap-4 bg-[#F0F0F0] px-6 pb-4 text-xs">
+        <div class="w-full flex items-center justify-between">
+            <a href="../index.html"><img src="../Assets/Images/header/logo.svg" alt=""></a>
+            <a href="tel:8 800 000 00 00">8 800 000 00 00</a>
+        </div>
+        <div class="grid grid-cols-2 gap-6">
+            <div class="flex flex-col gap-3">
+                <p class="text-sm">Магазин</p>
+                <div class="flex flex-col gap-1.5">
+                    <a href="">База дикторов</a>
+                    <a href="">Дикторы по популярности</a>
+                    <a href="">Правила сотрудничества</a>
+                    <a href="">Файлообменник</a>
+                </div>
+            </div>
+            <div class="flex flex-col gap-3">
+                <p class="text-sm">Покупка</p>
+                <div class="flex flex-col gap-1.5">
+                    <a href="">Купить</a>
+                    <a href="">Цены</a>
+                    <a href="">Рассчитать стоимость</a>
+                    <a href="">Как оплатить</a>
+                    <a href="">Скидки и бонусы</a>
+                </div>
+            </div>
+            <div class="flex flex-col gap-3">
+                <p class="text-sm">Компания</p>
+                <div class="flex flex-col gap-1.5">
+                    <a href="">О нас</a>
+                    <a href="">Обратная связь</a>
+                    <a href="">Работа с нами</a>
+                    <a href="#">Контакты</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+	<script src="https://code.jquery.com/jquery-3.6.3.min.js" 
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+    crossorigin="anonymous"></script>    
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+	<script src="../Assets/JS/custom.js"></script>
+</body>
+</html>
