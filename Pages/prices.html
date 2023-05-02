@@ -73,52 +73,128 @@
 
     <div class="w-full px-6 pt-3 flex flex-col gap-5 pb-[50px]">
         <p class="text-xl prata">Цены</p>
-        <div class="flex flex-col">
-            <div class="w-full h-px bg-[#999999]"></div>
-            <div class="flex items-center pt-2.5 pb-2 justify-between max-w-[300px]">
-                <p>Услуга/ Тип</p>
-                <p>Объем</p>
-                <p>Цена</p>
+        <div class="grid grid-cols-[min-content_1fr_1fr] gap-x-4">
+            <div class="col-span-full h-px bg-[#999999] mb-2.5"></div>                  
+            <p>Услуга / Тип</p>
+            <p>Объем</p>
+            <p>Цена</p>
+            <div class="col-span-full h-px bg-[#999999] mt-2.5"></div>
+            <p class="col-span-full text-sm font-medium my-5"><span class="uppercase">Дикторская начитка</span> <br> (для одного ролика. Для нескольких роликов требуется ручной расчет стоимости)</p>
+            <p class="text-sm font-medium">Рекламная</p>
+            <p class="text-sm">До 30 сек (один ролик)</p>
+            <p class="text-sm">От 350 руб.</p>
+            <p class="text-xs col-span-full mt-2.5">Входит 3 дубля прочитанного текста. Голос не обрабатывается, не чистится. Возможны 2 бесплатные перечитки, если не меняется задание или пожелания (ошибки или недочеты диктора). Дочитка возможна до 30 слов, оплачивается в половину цены. Есть ограничения по срокам.</p>
+            <div class="flex justify-between col-span-full gap-[75px] mt-5">
+                <p class="text-sm font-medium">Чистка начитки (пародии, вокала)</p>
+                <p class="text-sm">От 20 до 60% от стоимости заказа</p>
             </div>
-            <div class="w-full h-px bg-[#999999]"></div>
+            <p class="text-xs col-span-full mt-2.5">Входит 3 дубля прочитанного текста. Голос не обрабатывается, не чистится. Возможны 2 бесплатные перечитки, если не меняется задание или пожелания (ошибки или недочеты диктора). Дочитка возможна до 30 слов, оплачивается в половину цены. Есть ограничения по срокам.</p>      
+            <div class="col-span-full h-px bg-[#999999] mt-5"></div>
+            <p class="text-sm font-medium uppercase col-span-full my-5">Готовый аудиоролик</p>
+            <p class="text-sm font-medium">Информационный</p>
+            <p class="text-sm">До 30 сек </p>
+            <p class="text-sm">От 1185 руб.</p>
+            <p class="text-xs col-span-full mt-2.5 mb-5">Входит 1 голос, 1 подложка на весь ролик. Каждый дополнительный голос добавляет к стоимости ролика стоимость начитки дополнительного голоса. Каждая дополнительная музыкальная подложка добавляет к стоимости ролика 185 рублей.</p>      
+            <p class="text-sm font-medium">Имиджевый</p>
+            <p class="text-sm">До 30 сек </p>
+            <p class="text-sm">От 1445 руб.</p>
+            <p class="text-xs col-span-full mt-2.5 mb-5">Входит 1 голос, 1-2 подложки на весь ролик, минимальные спецэффекты (набор телефонного номера, перебивка между разными частями одного ролика и прочее). Каждый дополнительный голос добавляет к стоимости ролика стоимость начитки дополнительного голоса. Каждая дополнительная музыкальная подложка добавляет к стоимости ролика 185 рублей.</p>      
+            <p class="text-sm font-medium">Игровой</p>
+            <p class="text-sm">До 30 сек </p>
+            <p class="text-sm">От 1770 руб.</p>
+            <p class="text-xs col-span-full mt-2.5 mb-5">Входит 1 голос, одна или несколько подложек на весь ролик, любые спецэффекты. Каждый дополнительный голос добавляет к стоимости ролика стоимость начитки дополнительного голоса. Каждая дополнительная музыкальная подложка добавляет к стоимости ролика 185 рублей.</p>      
+            <p class="text-sm font-medium">Вокальный</p>
+            <p class="text-sm">До 30 сек </p>
+            <p class="text-sm">От 1910 руб.</p>
+            <p class="text-xs col-span-full mt-2.5 mb-5">В стоимость входит 1 вокалист ценой 350р. Фонограмму предоставляет заказчик. При наличии текстовой части, добавляется стоимость дикторской начитки. При выборе более дорого вокалиста, стоимость ролика увеличивается на разницу цены. Каждая дополнительная лицензионная музыкальная подложка добавляет к стоимости ролика 185 рублей.</p>      
+            <p class="text-sm font-medium">Вокальный (подбор мелодии)</p>
+            <p class="text-sm">До 30 сек </p>
+            <p class="text-sm">От 1800 руб.</p>
+            <p class="text-xs col-span-full mt-2.5 mb-5">Подбор лицензионной музыкальной подложки под готовый текст заказчика. Предоставляется 3 демо-версии мелодий на выбор с черновой пропевкой.</p>      
+            <div class="col-span-full h-px bg-[#999999]"></div>   
+            <p class="font-medium text-sm col-span-full my-5 uppercase">Вокал</p>
+            <p class="text-sm font-medium">На фонограмму заказчика</p>
+            <p class="text-sm">До 30 сек </p>
+            <p class="text-sm">От 350 руб.</p>
+            <p class="text-xs col-span-full mt-2.5">В стоимость входит минимум 3 пропевки, без сведения. Голос не чистится, не обрабатывается. При необходимости, пишутся вокальные партии.</p>      
+            <div class="col-span-full h-px bg-[#999999] my-5"></div>   
+            <p class="font-medium text-sm col-span-full mb-5 uppercase">Пародия</p>
+            <p class="text-sm font-medium">Рекламная</p>
+            <p class="text-sm">До 30 сек </p>
+            <p class="text-sm">От 350 руб.</p>
+            <p class="text-xs col-span-full mt-2.5">Входит 3 дубля прочитанного текста. Голос не обрабатывается, не чистится.</p>      
+            <div class="col-span-full h-px bg-[#999999] my-5"></div>               
+            <p class="font-medium text-sm col-span-full mb-5 uppercase">Сценарий</p>
+            <p class="text-sm font-medium">Информационный</p>
+            <p class="text-sm">До 30 сек</p>
+            <p class="text-sm">650 руб.</p>
+            <p class="text-xs col-span-full mt-2.5 mb-5">2 варианта сценария</p>
+            <p class="text-sm font-medium">Имиджевый</p>
+            <p class="text-sm">До 30 сек</p>
+            <p class="text-sm">900 руб.</p>
+            <p class="text-xs col-span-full mt-2.5 mb-5">2 варианта сценария</p>
+            <p class="text-sm font-medium">Игровой</p>
+            <p class="text-sm">До 30 сек</p>
+            <p class="text-sm">1000 руб.</p>
+            <p class="text-xs col-span-full mt-2.5 mb-5">2 варианта сценария</p>
+            <p class="text-sm font-medium">Вокальный</p>
+            <p class="text-sm">До 30 сек</p>
+            <p class="text-sm">1300 руб.</p>
+            <p class="text-xs col-span-full mt-2.5 mb-5">2 варианта сценария</p>
+            <p class="text-sm font-medium">Стихотворный</p>
+            <p class="text-sm">До 30 сек</p>
+            <p class="text-sm">1100 руб.</p>
+            <p class="text-xs col-span-full mt-2.5 mb-5">2 варианта сценария</p>
+            <p class="text-sm font-medium">Гимн</p>
+            <p class="text-sm">До 180 сек</p>
+            <p class="text-sm">5200 руб.</p>
+            <p class="text-xs col-span-full mt-2.5 mb-5">1 вариант сценария</p>
         </div>
-        <p class="text-sm font-medium flex flex-col">
-            <span class="uppercase">Дикторская начитка</span>
-            <span>(для одного ролика. Для нескольких роликов требуется ручной расчет стоимости)</span>
-        </p>
-        <div class="flex flex-col gap-2.5">
-            <div class="flex justify-between text-sm">
-                <p class="font-medium w-32">Рекламная</p>
-                <p>До 30 сек <br> (один ролик)</p>
-                <p>От 350 руб.</p>
+        <div class="flex flex-col gap-5 mt-[30px]">
+            <p class="prata text-xl">Коэффициенты на дикторскую начитку, пародию и вокал</p>
+            <div class="grid grid-cols-[1fr_min-content] text-sm gap-y-5">
+                <div class="col-span-full h-px bg-[#999999]"></div> 
+                <p class="text-base -mt-2.5">Объем</p>
+                <p class="text-base -mt-2.5">Коэффициент</p>
+                <div class="col-span-full h-px bg-[#999999] -mt-2.5"></div>    
+                <p class="-mt-2.5">До 30 сек включительно</p>
+                <p class="text-center -mt-2.5">1</p>
+                <p>От 31 до 50 сек включительно</p>
+                <p class="text-center">1,5</p>
+                <p>От 51 до 70 сек включительно</p>
+                <p class="text-center">2</p>
+                <p>От 71 до 90 сек включительно</p>
+                <p class="text-center">2,5</p>
+                <p>От 91 до 110 сек включительно</p>
+                <p class="text-center">3</p>
+                <div class="col-span-full flex gap-[55px]">
+                    <p>111 сек и выше</p>
+                    <p>Считается по сложному алгоритму</p>
+                </div>
             </div>
-            <p class="text-xs">Входит 3 дубля прочитанного текста. Голос не обрабатывается, не чистится. Возможны 2 бесплатные перечитки, если не меняется задание или пожелания (ошибки или недочеты диктора). Дочитка возможна до 30 слов, оплачивается в половину цены. Есть ограничения по срокам.</p>
         </div>
-        <div class="flex flex-col gap-2.5">
-            <div class="flex justify-between text-sm">
-                <p class="font-medium w-fit max-w-[131px]">Чистка начитки (пародии, вокала)</p>
-                <p class="w-fit max-w-[134px]">От 20 до 60% от стоимости заказа</p>
+        <div class="flex flex-col gap-5 mt-[30px]">
+            <p class="prata text-xl">Общие коэффициенты на всю продукцию</p>
+            <div class="grid grid-cols-[10fr_11fr] text-sm gap-y-5">
+                <div class="col-span-full h-px bg-[#999999]"></div> 
+                <p class="text-base -mt-2.5">Объем</p>
+                <p class="text-base -mt-2.5">Коэффициент</p>
+                <div class="col-span-full h-px bg-[#999999] -mt-2.5"></div>    
+                <p class="-mt-2.5">Автоответчик</p>
+                <p class="-mt-2.5">1 и выше <br> <span class="text-xs">(определяется модератором)</span></p>
+                <p>Политика <br> <span class="text-xs">(выборы и прочее)</span></p>
+                <p>2</p>
+                <p>Оформление эфира <br> <span class="text-xs">(джинглы, лайнеры)</span></p>
+                <p>2 и выше <br> <span class="text-xs">(определяется модератором)</span></p>
+                <p>Дубляж видео  <br> <span class="text-xs">(чтение "в губы")</span></p>
+                <p>2 и выше <br> <span class="text-xs">(по выбору исполнителя)</span></p>
+                <p>Синхронизация озвучки с видео</p>
+                <p>1.7 и выше <br> <span class="text-xs">(предоставляется 1 дубль)</span></p>
+                <p>Технически сложные тексты <br> <span class="text-xs">(медицинские и т.п.)</span></p>
+                <p>1.5 и выше <br> <span class="text-xs">(определяется модератором)</span></p>
             </div>
-            <p class="text-xs">Входит 3 дубля прочитанного текста. Голос не обрабатывается, не чистится. Возможны 2 бесплатные перечитки, если не меняется задание или пожелания (ошибки или недочеты диктора). Дочитка возможна до 30 слов, оплачивается в половину цены. Есть ограничения по срокам.</p>
         </div>
-        <div class="w-full h-px bg-[#999999]"></div>
-        <p class="uppercase text-sm font-medium">Готовый аудиоролик</p>
-        <div class="flex flex-col gap-2.5">
-            <div class="flex justify-between text-sm">
-                <p class="font-medium w-32">Информационный</p>
-                <p>До 30 сек </p>
-                <p>От 1185 руб.</p>
-            </div>
-            <p class="text-xs">Входит 1 голос, 1 подложка на весь ролик. Каждый дополнительный голос добавляет к стоимости ролика стоимость начитки дополнительного голоса. Каждая дополнительная музыкальная подложка добавляет к стоимости ролика 185 рублей.</p>
-        </div>
-        <div class="flex flex-col gap-2.5">
-            <div class="flex justify-between text-sm">
-                <p class="font-medium w-32">Имиджевый</p>
-                <p>До 30 сек </p>
-                <p>От 1445 руб.</p>
-            </div>
-            <p class="text-xs">Входит 1 голос, 1-2 подложки на весь ролик, минимальные спецэффекты (набор телефонного номера, перебивка между разными частями одного ролика и прочее). Каждый дополнительный голос добавляет к стоимости ролика стоимость начитки дополнительного голоса. Каждая дополнительная музыкальная подложка добавляет к стоимости ролика 185 рублей.</p>
-        </div>
+        <p class="mt-[14px] text-xs">*Прайс-лист действителен с 15 марта 2022 г. <br> по 31 декабря 2022 г. <br> <a href="" class="underline underline-offset-2">Скачать</a> прайс-лист в формате doc.</p>
     </div>
 
     <footer class="w-full flex flex-col gap-4 bg-[#F0F0F0] px-6 pb-4 text-xs">
