@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Assets/CSS/custom.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Исполнитель/ЛК/Настройки</title>    
+    <style type="text/tailwindcss">
+        .ui-tabs-tab {
+            @apply border border-[#79838B] py-1 w-[117px] flex items-center justify-center rounded-[10px] text-sm;
+        }
+        .ui-tabs-active {
+            @apply bg-[#F76B24] text-white border-[#F76B24];
+        }
+    </style>
+</head>
+<body class="inter min-h-screen flex flex-col">
+    <header class="w-full px-6">
+        <div class="flex items-center justify-between pt-1 pb-px border-b border-black" id="nav">
+            <a href="../index.html"><img src="../Assets/Images/header/logo.svg" alt=""></a>
+            <div class="flex items-center gap-2.5">
+                <button>
+                    <img src="../Assets/Images/header/phone.svg" alt="">
+                </button>
+                <button>
+                    <img src="../Assets/Images/header/chat.svg" alt="">
+                </button>
+                <button type="button" class="relative h-6 w-6" id="toggler">
+                    <img src="../Assets/Images/header/menu.svg" alt="" class="absolute top-0 left-0">
+                    <img src="../Assets/Images/header/close.svg" alt="" class="absolute top-0 left-0 hidden">
+                </button>
+            </div>
+        </div>
+    </header>  
+    <div class="w-full px-6 left-0 absolute top-auto z-50 pt-4 pb-[137px] flex flex-col bg-[#F0F0F0] inter text-xl transition-all duration-500 -translate-y-[calc(100%+43px)]" id="menu">
+        <button class="bg-[#F76B24] pl-4 pr-3 py-3 text-white self-end rounded-[20px]">Вход и регистрация</button>
+        <div class="dropdown">
+            <button class="w-full pb-2 border-b border-black flex items-end justify-between mt-9 dropdown-toggler" type="button">
+                <span>База дикторов</span>
+                <img src="../Assets/Images/icons/dropdown.svg" alt="" class="transition-all duration-500 dropdown-img">
+            </button>
+            <div class="hidden dropdown-list">
+                <div class="flex flex-col text-base gap-2.5 mt-2.5 text-[#616060]">
+                    <a href="#" class="pb-1 border-b border-[#79838B] px-6 w-full">Дикторский голос</a>
+                    <a href="" class="pb-1 border-b border-[#79838B] px-6 w-full">Аудиоролик</a>
+                    <a href="" class="pb-1 border-b border-[#79838B] px-6 w-full">Вокал</a>
+                    <a href="" class="pb-1 border-b border-[#79838B] px-6 w-full">Пародия</a>
+                    <a href="" class="pb-1 border-b border-[#79838B] px-6 w-full">Сценарий</a>
+                </div>
+            </div>
+        </div>
+        <div class="dropdown">            
+            <button class="w-full pb-2 border-b border-black flex items-end justify-between pt-4 dropdown-toggler" type="button">
+                <span>Купить</span>
+                <img src="../Assets/Images/icons/dropdown.svg" alt="" class="transition-all duration-500 dropdown-img">
+            </button>
+            <div class="hidden dropdown-list">
+                <div class="flex flex-col text-base gap-2.5 mt-2.5 text-[#616060]">
+                    <a href="" class="pb-1 border-b border-[#79838B] px-6 w-full">Дикторский голос</a>
+                    <a href="" class="pb-1 border-b border-[#79838B] px-6 w-full">Аудиоролик</a>
+                    <a href="" class="pb-1 border-b border-[#79838B] px-6 w-full">Вокал</a>
+                    <a href="" class="pb-1 border-b border-[#79838B] px-6 w-full">Пародия</a>
+                    <a href="" class="pb-1 border-b border-[#79838B] px-6 w-full">Сценарий</a>
+                </div>
+            </div>
+        </div>
+        <a href="" class="w-full pb-2 border-b border-black pt-4">Цены</a>
+        <a href="" class="w-full pb-2 border-b border-black pt-4">Дикторы по популярности</a>
+        <a href="" class="w-full pb-2 border-b border-black pt-4">Рассчитать стоимость</a>
+        <a href="" class="w-full pb-2 border-b border-black pt-4">Контакты</a>
+        <a href="tel:8 800 000 00 00" class="pt-10">8 800 000 00 00 </a>
+    </div>
+
+    <div class="w-full px-6 pt-1 flex gap-1 text-[10px] text-[#827F7F]">
+        <a href="../index.html">Главная</a>
+        <p>/</p>
+        <a href="contractor_lk.html">Личный кабинет</a>
+        <p>/</p>
+        <p>Настройки</p>
+    </div>
+
+    <div class="w-full px-6 pt-3 flex flex-col gap-5 pb-[50px]">
+        <div class="flex flex-col gap-2.5">
+            <p class="text-xl prata">Личный кабинет</p>
+            <div class="flex gap-3 items-center">
+                <img src="../Assets/Images/contractor/avatar.png" alt="">
+                <div class="flex flex-col gap-2.5">
+                    <p class="mt-3">Фамилия Имя</p>
+                    <div class="flex items-center gap-2.5">
+                        <div class="relative w-fit">
+                            <p class="rounded-[10px] border border-[#79838B] py-0.5 px-6">0</p>
+                            <img src="../Assets/Images/icons/ruble.svg" class="absolute top-1 right-1">
+                        </div>
+                        <p class="text-xs w-fit h-fit">Баланс, в рублях</p>
+                    </div>
+                    <a href="" class="text-[#F76B24] text-xs">Вывести деньги</a>
+                </div>
+            </div>
+            <div class="grid grid-cols-3 gap-[5px] text-sm">
+                <a class="flex items-center justify-center w-full py-1 border border-[#79838B] rounded-[10px]">Настройки</a>
+                <a class="flex items-center justify-center w-full py-1 border border-[#79838B] rounded-[10px]">Сообщения</a>
+                <a class="flex items-center justify-center w-full py-1 border text-white bg-[#F76B24] border-[#F76B24] rounded-[10px]">Новости</a>
+            </div>
+        </div>
+        <p class="prata mt-4">Настройки</p> 
+        <div class="flex flex-col gap-4">
+            <div class="dropdown">
+                <button class="w-full pb-2 border-b border-black flex items-start justify-between dropdown-toggler" type="button">
+                    <p class="text-left">Персональные данные</p>
+                    <img src="../Assets/Images/icons/dropdown.svg" alt="" class="transition-all duration-500 dropdown-img mt-1">
+                </button>
+                <div class="hidden dropdown-list pb-4">
+                    <div class="flex flex-col gap-5 mt-5 text-sm">
+                        <div class="flex flex-col gap-1">
+                            <input type="email" class="border border-[#79838B] rounded-[10px] py-1 px-2.5" placeholder="E-mail">
+                            <p class="text-[10px] text-[#79838B]">Будет использоваться для входа в личный кабинет</p>
+                        </div>
+                        <input type="email" class="border border-[#79838B] rounded-[10px] py-1 px-2.5" placeholder="E-mail для документов">
+                        <input type="text" class="border border-[#79838B] rounded-[10px] py-1 px-2.5" placeholder="Имя">
+                        <input type="text" class="border border-[#79838B] rounded-[10px] py-1 px-2.5" placeholder="Фамилия">
+                        <input type="text" class="border border-[#79838B] rounded-[10px] py-1 px-2.5" placeholder="Город">
+                        <div class="flex flex-col gap-2.5">
+                            <input type="number" class="border border-[#79838B] rounded-[10px] py-1 px-2.5" placeholder="+7 000 000-00-00">
+                            <button class="text-white px-2.5 py-1.5 bg-[#F76B24] w-fit self-end rounded-[10px]">Подтвердить</button>
+                        </div>
+                        <div class="flex flex-col gap-1">
+                            <input type="password" class="border border-[#79838B] rounded-[10px] py-1 px-2.5" placeholder="Новый пароль">
+                            <p class="text-[10px] text-[#79838B]">Только латинские буквы и цифры, не меньше 8 символов</p>
+                        </div>
+                        <div class="flex items-center gap-2.5">
+                            <input id="bonus" type="radio" class="shrink-0 w-[22px] h-[22px]">
+                            <label for="bonus" class="text-xs">Участвую в бонусной программе</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="w-full pb-2 border-b border-black flex items-start justify-between dropdown-toggler" type="button">
+                    <p class="text-left">Верификация профиля</p>
+                    <img src="../Assets/Images/icons/dropdown.svg" alt="" class="transition-all duration-500 dropdown-img mt-1">
+                </button>
+                <div class="hidden dropdown-list pb-4">
+                    <div id="tabs-profile" class="flex flex-col gap-5 mt-5">
+                        <ul class="flex items-center gap-2.5">
+                          <li><a href="#tabs-profile-1">Самозанятый</a></li>
+                          <li><a href="#tabs-profile-2">ИП</a></li>
+                          <li><a href="#tabs-profile-3">Нерезидент</a></li>
+                        </ul>
+                        <div class="flex flex-col gap-5" id="tabs-profile-1">
+                            <input type="text" class="border border-[#79838B] rounded-[10px] py-1 px-2.5" placeholder="ИНН">
+                            <div class="flex flex-col gap-2.5">
+                                <p class="text-xs font-medium">Фото главного разворота паспорта (страницы2-3)</p>
+                                <div class="flex flex-col gap-2.5 uploading">
+                                    <input type="file" name="" id="file" multiple class="hidden file" accept=".jpg,.png">
+                                    <div class="flex flex-col gap-2.5">
+                                        <label for="file" class="flex gap-1.5 items-center text-[#827F7F]">
+                                            <p class="text-sm">Добавить</p>
+                                            <img src="../Assets/Images/icons/plus_add.svg" alt="">
+                                        </label>
+                                        <p class="flex flex-wrap text-[#827F7F] text-sm hidden files"></p>
+                                    </div>
+                                    <p class="w-full text-[#827F7F] text-[10px]">Вы можете прикрепить файлы в формате jpg, png. <br> Размером не более 20 Мб</p>
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-2.5">
+                                <p class="text-xs font-medium">Фото разворота с адресом регистрации</p>
+                                <div class="flex flex-col gap-2.5 uploading">
+                                    <input type="file" name="" id="file2" multiple class="hidden file" accept=".jpg,.png">
+                                    <div class="flex flex-col gap-2.5">
+                                        <label for="file2" class="flex gap-1.5 items-center text-[#827F7F]">
+                                            <p class="text-sm">Добавить</p>
+                                            <img src="../Assets/Images/icons/plus_add.svg" alt="">
+                                        </label>
+                                        <p class="flex flex-wrap text-[#827F7F] text-sm hidden files"></p>
+                                    </div>
+                                    <p class="w-full text-[#827F7F] text-[10px]">Вы можете прикрепить файлы в формате jpg, png. <br> Размером не более 20 Мб</p>
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-2.5">
+                                <p class="text-xs font-medium">Заявление</p>
+                                <a href="" class="text-xs text-[#F76B24]">Скачать бланк заявления</a>
+                                <div class="flex flex-col gap-2.5 uploading">
+                                    <input type="file" name="" id="file3" multiple class="hidden file" accept=".jpg,.png">
+                                    <div class="flex flex-col gap-2.5">
+                                        <label for="file3" class="flex gap-1.5 items-center text-[#827F7F]">
+                                            <p class="text-sm">Добавить</p>
+                                            <img src="../Assets/Images/icons/plus_add.svg" alt="">
+                                        </label>
+                                        <p class="flex flex-wrap text-[#827F7F] text-sm hidden files"></p>
+                                    </div>
+                                    <p class="w-full text-[#827F7F] text-[10px]">Вы можете прикрепить файлы в формате jpg, png. <br> Размером не более 20 Мб</p>
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-2.5">
+                                <input type="text" class="border border-[#79838B] rounded-[10px] py-1 px-2.5" placeholder="Номер карты для вывода средств">
+                                <p class="text-[10px] text-[#827F7F]">Внимание: в случае указания карты самозанятого, которая зарегестрирована у вас в приложении “Мой налог”, налог будет удержан дважды: и приложением “Мой налог”, и нашим сервисом. Укажите другую карту, не используемую вами в качестве карты самозанятого.</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-5 text-sm" id="tabs-profile-2">
+                            <div class="flex flex-col gap-2">
+                                <p class="text-xs font-medium">Данные для вывода средств</p>
+                                <div class="funds">            
+                                    <button class="w-fit pb-2 text-[#F76B24] text-xs flex items-center gap-1 funds-toggler" type="button">
+                                        <span>Подробнее о выводе средств</span>
+                                        <img src="../Assets/Images/icons/dropdown.svg" alt="" class="transition-all duration-500 funds-img">
+                                    </button>
+                                    <div class="hidden funds-list font medium text-[10px] text-[#827F7F]">
+                                        Для вывода средств себе, как Исполнителю-Индивидуальному Предпринимателю, нужно заполнить следующие поля ниже. Полное наименование ИП можно вызвать, введя в поле свой ИНН. Далее введите данные своего банковского счета. <br><br> Выводы Исполнителю-ИП на расчетный счет будут отображаться в сверке как возвраты. Гонорары Исполнителя-ИП будут отображаться в сверке как поступления. <br><br> Таким образом, Вы сможете как потратить свой гонорар исполнителя на услуги сайта, так и вывести их на свой расчетный счет <br><br> Если у вас остались вопросы - задайте их нашим <a href="" class="text-[#F76B24]">консультантам</a>.
+                                    </div>
+                                </div>
+                            </div>
+                            <input type="text" class="border border-[#79838B] rounded-[10px] py-1 px-2.5" placeholder="Полное наименование ИП">
+                            <input type="number" class="border border-[#79838B] rounded-[10px] py-1 px-2.5" placeholder="ИНН">
+                            <input type="number" class="border border-[#79838B] rounded-[10px] py-1 px-2.5" placeholder="Номер расчетного счета">
+                            <input type="number" class="border border-[#79838B] rounded-[10px] py-1 px-2.5" placeholder="БИК">
+                            <input type="number" class="border border-[#79838B] rounded-[10px] py-1 px-2.5" placeholder="Номер корреспондентского счета">
+                            <button class="border border-[#F76B24] bg-[#F76B24] rounded-[10px] py-1 px-2.5 text-white w-fit">Сохранить изменения</button>
+                        </div>
+                        <div class="flex flex-col gap-5 text-sm" id="tabs-profile-3">
+                            <div class="flex flex-col gap-2">
+                                <p class="text-xs font-medium">Данные для вывода средств</p>
+                                <div class="funds">            
+                                    <button class="w-fit pb-2 text-[#F76B24] text-xs flex items-center gap-1 funds-toggler" type="button">
+                                        <span>Подробнее о выводе средств</span>
+                                        <img src="../Assets/Images/icons/dropdown.svg" alt="" class="transition-all duration-500 funds-img">
+                                    </button>
+                                    <div class="hidden funds-list font medium text-[10px] text-[#827F7F]">
+                                        Для нерезидентов практически ничего не меняется. Вывод по-прежнему может осуществляться на кошельки ЮMoney и Монета.ру. <br> <br>При этом комиссия за вывод остается на прежнем уровне. Налог в РФ нерезиденты, работающие дистанционно,оплачивать не должны. Оплату налогов нерезиденты должны осуществлять в своей стране. <br> <br>Далее на странице Верификации профиля сайта необходимо: <br>
+                                        1. Прикрепить скан/фото главного разворотапаспорта ( с фото) <br>
+                                        2. Прикрепить скан/фото разворота с адресом регистрации <br>
+                                        3. Ввести один или несколько кошельков (при вводе двух кошельков Вы можете выбирать, на какой кошелек выводить средства) <br> <br>
+
+                                        После проверки паспорта модератором Вы сможете выводить средства, как и ранее. <br> <br>Если у вас остались вопросы - задайте их нашим <a href="" class="text-[#F76B24]">консультантам</a>.
+                                    </div>
+                                </div>
+                            </div>
+                            <input type="text" class="border border-[#79838B] rounded-[10px] py-1 px-2.5" placeholder="Страна">
+                            <div class="flex flex-col gap-2.5">
+                                <p class="text-xs font-medium">Фото главного разворота паспорта (страницы2-3)</p>
+                                <div class="flex flex-col gap-2.5 uploading">
+                                    <input type="file" name="" id="file3" multiple class="hidden file" accept=".jpg,.png">
+                                    <div class="flex flex-col gap-2.5">
+                                        <label for="file3" class="flex gap-1.5 items-center text-[#827F7F]">
+                                            <p class="text-sm">Добавить</p>
+                                            <img src="../Assets/Images/icons/plus_add.svg" alt="">
+                                        </label>
+                                        <p class="flex flex-wrap text-[#827F7F] text-sm hidden files"></p>
+                                    </div>
+                                    <p class="w-full text-[#827F7F] text-[10px]">Вы можете прикрепить файлы в формате jpg, png. <br> Размером не более 20 Мб</p>
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-2.5">
+                                <p class="text-xs font-medium">Фото разворота с адресом регистрации</p>
+                                <div class="flex flex-col gap-2.5 uploading">
+                                    <input type="file" name="" id="file4" multiple class="hidden file" accept=".jpg,.png">
+                                    <div class="flex flex-col gap-2.5">
+                                        <label for="file4" class="flex gap-1.5 items-center text-[#827F7F]">
+                                            <p class="text-sm">Добавить</p>
+                                            <img src="../Assets/Images/icons/plus_add.svg" alt="">
+                                        </label>
+                                        <p class="flex flex-wrap text-[#827F7F] text-sm hidden files"></p>
+                                    </div>
+                                    <p class="w-full text-[#827F7F] text-[10px]">Вы можете прикрепить файлы в формате jpg, png. <br> Размером не более 20 Мб</p>
+                                </div>
+                            </div>
+                            <input type="number" class="border border-[#79838B] rounded-[10px] py-1 px-2.5" placeholder="Номер счета Moneta.ru">
+                            <input type="number" class="border border-[#79838B] rounded-[10px] py-1 px-2.5" placeholder="Номер кошелька ЮMoney">
+                            <button class="border border-[#F76B24] bg-[#F76B24] rounded-[10px] py-1 px-2.5 text-white w-fit">Сохранить изменения</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="w-full pb-2 border-b border-black flex items-start justify-between dropdown-toggler" type="button">
+                    <p class="text-left">Реквизиты для вывода средств из проекта</p>
+                    <img src="../Assets/Images/icons/dropdown.svg" alt="" class="transition-all duration-500 dropdown-img mt-1">
+                </button>
+                <div class="hidden dropdown-list pb-4">
+                    <p class="text-[10px] text-[#827F7F] mt-5">Заполните любой удобный для вас способ перечисления средств</p>
+                    <div class="flex flex-col gap-5 mt-2.5 text-sm">
+                        <input type="number" class="border border-[#79838B] rounded-[10px] py-1 px-2.5" placeholder="№ счета Moneta.ru">
+                        <input type="number" class="border border-[#79838B] rounded-[10px] py-1 px-2.5" placeholder="Яндекс. Деньги">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="w-full flex flex-col gap-4 bg-[#F0F0F0] px-6 pb-4 text-xs mt-auto">
+        <div class="w-full flex items-center justify-between">
+            <a href="../index.html"><img src="../Assets/Images/header/logo.svg" alt=""></a>
+            <a href="tel:8 800 000 00 00">8 800 000 00 00</a>
+        </div>
+        <div class="grid grid-cols-2 gap-6">
+            <div class="flex flex-col gap-3">
+                <p class="text-sm">Магазин</p>
+                <div class="flex flex-col gap-1.5">
+                    <a href="">База дикторов</a>
+                    <a href="">Дикторы по популярности</a>
+                    <a href="">Правила сотрудничества</a>
+                    <a href="">Файлообменник</a>
+                </div>
+            </div>
+            <div class="flex flex-col gap-3">
+                <p class="text-sm">Покупка</p>
+                <div class="flex flex-col gap-1.5">
+                    <a href="">Купить</a>
+                    <a href="">Цены</a>
+                    <a href="">Рассчитать стоимость</a>
+                    <a href="">Как оплатить</a>
+                    <a href="">Скидки и бонусы</a>
+                </div>
+            </div>
+            <div class="flex flex-col gap-3">
+                <p class="text-sm">Компания</p>
+                <div class="flex flex-col gap-1.5">
+                    <a href="">О нас</a>
+                    <a href="">Обратная связь</a>
+                    <a href="">Работа с нами</a>
+                    <a href="#">Контакты</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+	<script src="https://code.jquery.com/jquery-3.6.3.min.js" 
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+    crossorigin="anonymous"></script>    
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+	<script src="../Assets/JS/custom.js"></script>
+</body>
+</html>

@@ -8,7 +8,8 @@ $("#toggler").click(()=>{
   $("#nav").toggleClass("pb-px");
 });
 
-/* dropdown */
+
+/* dropdowns */
 $(".dropdown").each((i,el) => { 
   let list =  $(el).find('.dropdown-list');
   let img = $(el).find('.dropdown-img');
@@ -20,6 +21,16 @@ $(".dropdown").each((i,el) => {
     dropdown.toggleClass("pb-2");
   });
 });
+$(".funds").each((i,el) => { 
+  let list =  $(el).find('.funds-list');
+  let img = $(el).find('.funds-img');
+  let funds = $(el).find('.funds-toggler');
+  funds.click(() => {
+    list.slideToggle(500);
+    img.toggleClass("rotate-180");
+  });
+});
+
 
 /* filters */
 $("#filters").click(()=>{
@@ -27,6 +38,7 @@ $("#filters").click(()=>{
   $("#filt2").toggleClass("hidden");
   $("#more_filters").slideToggle(500);
 });
+
 
 /* files */
 let m = [];
@@ -58,7 +70,9 @@ $("#close_reg, #overlay_reg").click(()=>{
   $("body").toggleClass("overflow-hidden");
 });
 
+
 /* tabs */
 $( function() {
-  $( "#tabs-work" ).tabs();
+  $( "#tabs-work").tabs();  
+  $( "#tabs-profile").tabs();
 } );
