@@ -76,3 +76,22 @@ $( function() {
   $( "#tabs-work").tabs();  
   $( "#tabs-profile").tabs();
 } );
+
+
+/* counter */
+$(".counter").each((i,el) => { 
+  let plus = $(el).find(".counter-up");
+  let minus = $(el).find(".counter-down");
+  let text = $(el).find(".counter-text");
+  let val = text.val();
+  plus.click (function(){
+    val++;
+    text.val(val);
+  });
+  minus.click (function(){
+    if(val!=0){
+      val--;
+      text.val(val);
+    }
+  });
+});

@@ -274,6 +274,108 @@
             </div>
             <div class="dropdown">
                 <button class="w-full pb-2 border-b border-black flex items-start justify-between dropdown-toggler" type="button">
+                    <p class="text-left">Настройка уведомлений и <br> оповещения</p>
+                    <img src="../Assets/Images/icons/dropdown.svg" alt="" class="transition-all duration-500 dropdown-img mt-1">
+                </button>
+                <div class="hidden dropdown-list pb-4">                    
+                    <div class="flex flex-col gap-5 mt-5 text-xs">
+                        <div class="flex items-center gap-2.5">
+                            <input type="radio" name="notifications" id="remove" class="w-[22px] h-[22px] shrink-0">
+                            <label for="remove">Убрать всплывающие оповещения</label>
+                        </div>
+                        <div class="flex items-center gap-2.5">
+                            <input type="radio" name="notifications" id="sound" class="w-[22px] h-[22px] shrink-0">
+                            <label for="sound">Отключить звук у всплывающих оповещений</label>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <div class="flex items-center gap-2.5">
+                                <input type="radio" name="notifications" id="tg" class="w-[22px] h-[22px] shrink-0">
+                                <label for="tg">Получать уведомления в Telegram</label>
+                            </div>
+                            <p class="text-[#79838B]">Для подключения уведомлений необходимо подписаться на нашего <a href="" class="text-[#F76B24]">чат-бота</a></p>
+                        </div>
+                        <div class="flex flex-col gap-2.5">
+                            <p>Не отправлять оповещения</p>
+                            <div class="flex items-center text-[#79838B] gap-1">
+                                <p>с</p>
+                                <input type="number" placeholder="00" class="border-b border-[#79838B] text-base w-5 focus:outline-none">
+                                <p>до</p>
+                                <input type="number" placeholder="00" class="border-b border-[#79838B] text-base w-5 focus:outline-none">
+                                <p>по Москве</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <p>Получать уведомление по эл.почте</p>
+                            <div class="flex items-center gap-2.5">
+                                <input type="radio" name="email-not" id="email1" class="w-[22px] h-[22px] shrink-0">
+                                <label for="email1">При поступлении заказа</label>
+                            </div>
+                            <div class="flex items-center gap-2.5">
+                                <input type="radio" name="email-not" id="email2" class="w-[22px] h-[22px] shrink-0">
+                                <label for="email2">При поступлении СРОЧНОГО заказа</label>
+                            </div>
+                            <div class="flex items-center gap-2.5">
+                                <input type="radio" name="email-not" id="email3" class="w-[22px] h-[22px] shrink-0">
+                                <label for="email3">При заказе клиентом дочитки</label>
+                            </div>
+                            <div class="flex items-center gap-2.5">
+                                <input type="radio" name="email-not" id="email4" class="w-[22px] h-[22px] shrink-0">
+                                <label for="email4">При заказе клиентом перечитки без изменения задания</label>
+                            </div>
+                            <div class="flex items-center gap-2.5">
+                                <input type="radio" name="email-not" id="email5" class="w-[22px] h-[22px] shrink-0">
+                                <label for="email5">При заказе клиентом перечитки с изменением задания</label>
+                            </div>
+                            <div class="flex items-center gap-2.5">
+                                <input type="radio" name="email-not" id="email6" class="w-[22px] h-[22px] shrink-0">
+                                <label for="email6">При отмене заказа клиентом до того, как Вы его приняли</label>
+                            </div>
+                            <div class="flex items-center gap-2.5">
+                                <input type="radio" name="email-not" id="email7" class="w-[22px] h-[22px] shrink-0">
+                                <label for="email7">При добавлении уточнения к заказу</label>
+                            </div>
+                            <div class="flex items-center gap-2.5">
+                                <input type="radio" name="email-not" id="email8" class="w-[22px] h-[22px] shrink-0">
+                                <label for="email8">При продлении клиентом срока выполнения заказа</label>
+                            </div>
+                            <div class="flex items-center gap-2.5">
+                                <input type="radio" name="email-not" id="email9" class="w-[22px] h-[22px] shrink-0">
+                                <label for="email9">При отказе в продлении срока выполнения заказа</label>
+                            </div>
+                            <div class="flex items-center gap-2.5">
+                                <input type="radio" name="email-not" id="email10" class="w-[22px] h-[22px] shrink-0">
+                                <label for="email10">Напоминание отметиться OFFLINE</label>
+                            </div>
+                            <div class="flex items-center gap-2.5">
+                                <input type="radio" name="email-not" id="email11" class="w-[22px] h-[22px] shrink-0">
+                                <label for="email11">Напоминание отметиться ONLINE</label>
+                            </div>
+                            <div class="flex items-center gap-2.5">
+                                <input type="radio" name="email-not" id="email12" class="w-[22px] h-[22px] shrink-0">
+                                <label for="email12">При поступлении нового вопроса от клиента</label>
+                            </div>
+                            <div class="flex items-center gap-2.5">
+                                <input type="radio" name="email-not" id="email13" class="w-[22px] h-[22px] shrink-0">
+                                <label for="email13">При загрузке клиентом ролика для портфолии</label>
+                            </div>
+                            <div class="flex items-center gap-2.5">
+                                <input type="radio" name="email-not" id="email14" class="w-[22px] h-[22px] shrink-0">
+                                <label for="email14">При добавление Вас в Избранные</label>
+                            </div>
+                            <div class="flex items-center gap-2.5">
+                                <input type="radio" name="email-not" id="email15" class="w-[22px] h-[22px] shrink-0">
+                                <label for="email15">При добавление оценки на заказ</label>
+                            </div>
+                            <div class="flex items-center gap-2.5 mt-3">
+                                <input type="radio" name="email-news" id="email16" class="w-[22px] h-[22px] shrink-0">
+                                <label for="email16">Получать новости и рекламные рассылки <br> на e-mail</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="w-full pb-2 border-b border-black flex items-start justify-between dropdown-toggler" type="button">
                     <p class="text-left">Реквизиты для вывода средств из проекта</p>
                     <img src="../Assets/Images/icons/dropdown.svg" alt="" class="transition-all duration-500 dropdown-img mt-1">
                 </button>
@@ -282,6 +384,319 @@
                     <div class="flex flex-col gap-5 mt-2.5 text-sm">
                         <input type="number" class="border border-[#79838B] rounded-[10px] py-1 px-2.5" placeholder="№ счета Moneta.ru">
                         <input type="number" class="border border-[#79838B] rounded-[10px] py-1 px-2.5" placeholder="Яндекс. Деньги">
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="w-full pb-2 border-b border-black flex items-start justify-between dropdown-toggler" type="button">
+                    <p class="text-left">Подключенные типы исполнителя</p>
+                    <img src="../Assets/Images/icons/dropdown.svg" alt="" class="transition-all duration-500 dropdown-img mt-1">
+                </button>
+                <div class="hidden dropdown-list pb-4">                    
+                    <div class="flex flex-col gap-5 mt-5 text-sm">
+                        <div class="flex items-center gap-2.5">
+                            <input type="radio" id="dictor" name="" class="w-[22px] h-[22px] shrink-0" checked>
+                            <label for="dictor">Диктор</label>
+                        </div>
+                        <div class="flex flex-col gap-2.5">
+                            <p class="font-medium">Ставка диктора (в рублях)</p>
+                            <input type="number" class="border border-[#79838B] rounded-[10px] py-1 px-2.5" placeholder="0">
+                            <p class="text-[10px] text-[#827F7F]">Ваш гонорар будет составлять 53% от указанной ставки</p>
+                            <p class="font-medium">Демо-запись голоса</p>
+                            <div class="flex flex-col gap-2.5 uploading">
+                                <input type="file" name="" id="file5" multiple class="hidden file" accept=".jpg,.png">
+                                <div class="flex flex-col gap-2.5">
+                                    <label for="file5" class="flex gap-1.5 items-center text-[#827F7F]">
+                                        <p class="text-sm">Добавить</p>
+                                        <img src="../Assets/Images/icons/plus_add.svg" alt="">
+                                    </label>
+                                    <p class="flex flex-wrap text-[#827F7F] text-sm hidden files"></p>
+                                </div>
+                                <p class="w-full text-[#827F7F] text-[10px]">Вы можете прикрепить файлы в формате jpg, png. <br> Размером не более 20 Мб</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2.5">
+                            <input type="radio" id="dictor" name="" class="w-[22px] h-[22px] shrink-0" checked>
+                            <label for="dictor">Вокалист</label>
+                        </div>
+                        <div class="flex flex-col gap-2.5">
+                            <p class="font-medium">Ставка диктора (в рублях)</p>
+                            <input type="number" class="border border-[#79838B] rounded-[10px] py-1 px-2.5" placeholder="0">
+                            <p class="text-[10px] text-[#827F7F]">Ваш гонорар будет составлять 53% от указанной ставки</p>
+                            <p class="font-medium">Демо-запись голоса</p>
+                            <div class="flex flex-col gap-2.5 uploading">
+                                <input type="file" name="" id="file6" multiple class="hidden file" accept=".jpg,.png">
+                                <div class="flex flex-col gap-2.5">
+                                    <label for="file6" class="flex gap-1.5 items-center text-[#827F7F]">
+                                        <p class="text-sm">Добавить</p>
+                                        <img src="../Assets/Images/icons/plus_add.svg" alt="">
+                                    </label>
+                                    <p class="flex flex-wrap text-[#827F7F] text-sm hidden files"></p>
+                                </div>
+                                <p class="w-full text-[#827F7F] text-[10px]">Вы можете прикрепить файлы в формате jpg, png. <br> Размером не более 20 Мб</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2.5">
+                            <input type="radio" id="dictor" name="" class="w-[22px] h-[22px] shrink-0" checked>
+                            <label for="dictor">Пародист</label>
+                        </div>
+                        <div class="flex flex-col gap-2.5">
+                            <p class="font-medium">Ставка диктора (в рублях)</p>
+                            <input type="number" class="border border-[#79838B] rounded-[10px] py-1 px-2.5" placeholder="0">
+                            <p class="text-[10px] text-[#827F7F]">Ваш гонорар будет составлять 53% от указанной ставки</p>
+                            <p class="font-medium">Персонаж пародии</p>
+                            <input type="text" class="border border-[#79838B] rounded-[10px] py-1.5 px-2.5 text-xs" list="characters" placeholder="Выберите из списка">
+                            <datalist id="characters">
+                                <option value="Персонаж 1"></option>
+                                <option value="Персонаж 2"></option>
+                                <option value="Персонаж 3"></option>
+                                <option value="Персонаж 4"></option>
+                                <option value="Персонаж 5"></option>
+                            </datalist>
+                            <input type="text" class="border border-[#79838B] rounded-[10px] py-1.5 px-2.5 text-xs" placeholder="Или напишите свой вариант">
+                            <p class="font-medium">Демо-запись голоса</p>
+                            <div class="flex flex-col gap-2.5 uploading">
+                                <input type="file" name="" id="file7" multiple class="hidden file" accept=".jpg,.png">
+                                <div class="flex flex-col gap-2.5">
+                                    <label for="file7" class="flex gap-1.5 items-center text-[#827F7F]">
+                                        <p class="text-sm">Добавить</p>
+                                        <img src="../Assets/Images/icons/plus_add.svg" alt="">
+                                    </label>
+                                    <p class="flex flex-wrap text-[#827F7F] text-sm hidden files"></p>
+                                </div>
+                                <p class="w-full text-[#827F7F] text-[10px]">Вы можете прикрепить файлы в формате jpg, png. <br> Размером не более 20 Мб</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="w-full pb-2 border-b border-black flex items-start justify-between dropdown-toggler" type="button">
+                    <p class="text-left">Параметры исполнителя</p>
+                    <img src="../Assets/Images/icons/dropdown.svg" alt="" class="transition-all duration-500 dropdown-img mt-1">
+                </button>
+                <div class="hidden dropdown-list pb-4">
+                    <div class="flex flex-col gap-5 mt-2.5 text-xs">
+                        <div class="flex flex-col gap-2.5">
+                            <p class="text-sm font-medium">Срок выполнения заказа в часах</p>
+                            <div class="grid grid-cols-2 gap-5">
+                                <input type="text" class="py-1.5 px-4 rounded-[10px] border border-[#79838B]" placeholder="Начитка,пародия">
+                                <input type="text" class="py-1.5 px-4 rounded-[10px] border border-[#79838B]" placeholder="Вокал">
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-2.5">
+                            <div class="flex items-center gap-2.5">
+                                <input type="radio" id="param1" name="parameters" class="w-[22px] h-[22px] shrink-0">
+                                <label for="param1">Могу выполнять срочно за доп.плату</label>
+                            </div>
+                            <p class="text-[10px] text-[#827F7F]">Клиент сможет указать, что заказ срочный, в таком случае срок выполнения сокращается минимум в 2 раза</p>
+                            <div class="flex items-center gap-2.5">
+                                <input type="radio" id="param2" name="parameters" class="w-[22px] h-[22px] shrink-0">
+                                <label for="param2">Могу чистить начитку за доп.плату</label>
+                            </div>
+                            <p class="text-[10px] text-[#827F7F]">Почищенная начитка - это минимум 3 чистых дубля, готовых к постановке в проекте ролика, без повторений и ошибок</p>
+                            <div class="flex items-center gap-1">
+                                <div class="counter relative w-fit">
+                                    <input type="text" value="50" class="border border-[#79838B] rounded-[10px] py-2 pl-2.5 pr-[34px] counter-text w-[69px] text-[#79838B]">
+                                    <button type="button" class="counter-up absolute right-2.5 top-2.5">
+                                        <img src="../Assets/Images/icons/arrow-up.png" alt="">
+                                    </button>
+                                    <button type="button" class="counter-down absolute right-2.5 bottom-2.5">
+                                        <img src="../Assets/Images/icons/arrow-down.png" alt="">
+                                    </button>
+                                    <p class="text-[#79838B] absolute top-1/2 -translate-y-1/2 right-6">%</p>
+                                </div>
+                                <p>От стоимости заказа</p>
+                            </div>
+                            <div class="flex items-center gap-2.5">
+                                <input type="radio" id="param3" name="parameters" class="w-[22px] h-[22px] shrink-0">
+                                <label for="param3">Могу делать дубляж видео</label>
+                            </div>
+                            <p class="text-[10px] text-[#827F7F]">Дубляж видео рассчитывается по выбранному коэффициенту</p>
+                            <div class="flex items-center gap-2.5">
+                                <input type="radio" id="param4" name="parameters" class="w-[22px] h-[22px] shrink-0">
+                                <label for="param4">Могу делать озвучивание видео (синхронизацию)</label>
+                            </div>
+                            <p class="text-[10px] text-[#827F7F]">Озвучивание видео рассчитывается по выбранному коэффициенту</p>
+                            <div class="flex items-center gap-1">
+                                <div class="counter relative w-fit">
+                                    <input type="text" value="200" class="border border-[#79838B] rounded-[10px] py-2 pl-2.5 pr-[34px] counter-text w-[69px] text-[#79838B]">
+                                    <button type="button" class="counter-up absolute right-2.5 top-2.5">
+                                        <img src="../Assets/Images/icons/arrow-up.png" alt="">
+                                    </button>
+                                    <button type="button" class="counter-down absolute right-2.5 bottom-2.5">
+                                        <img src="../Assets/Images/icons/arrow-down.png" alt="">
+                                    </button>
+                                    <p class="text-[#79838B] absolute top-1/2 -translate-y-1/2 right-6">%</p>
+                                </div>
+                                <p>От стоимости заказа</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="w-full pb-2 border-b border-black flex items-start justify-between dropdown-toggler" type="button">
+                    <p class="text-left">Иностранные языки</p>
+                    <img src="../Assets/Images/icons/dropdown.svg" alt="" class="transition-all duration-500 dropdown-img mt-1">
+                </button>
+                <div class="hidden dropdown-list pb-4">
+                    <div class="flex flex-col gap-5 mt-2.5 text-sm">
+                        <div class="flex flex-col gap-2.5">
+                            <input type="text" class="border border-[#79838B] rounded-[10px] py-1 px-2.5" list="languages" placeholder="Выберите из списка">
+                            <datalist id="languages">
+                                <option value="Английский"></option>
+                                <option value="Французский"></option>
+                                <option value="Немецкий"></option>
+                                <option value="Японский"></option>
+                                <option value="Испанский"></option>
+                            </datalist>
+                            <input type="text" class="border border-[#79838B] rounded-[10px] py-1 px-2.5" placeholder="Или напишите свой вариант">
+                        </div>
+                        <div class="flex flex-col gap-2.5">
+                            <p class="font-medium">Демо-запись голоса</p>
+                            <div class="flex flex-col gap-2.5 uploading">
+                                <input type="file" name="" id="file8" multiple class="hidden file" accept=".jpg,.png">
+                                <div class="flex flex-col gap-2.5">
+                                    <label for="file8" class="flex gap-1.5 items-center text-[#827F7F]">
+                                        <p class="text-sm">Добавить</p>
+                                        <img src="../Assets/Images/icons/plus_add.svg" alt="">
+                                    </label>
+                                    <p class="flex flex-wrap text-[#827F7F] text-sm hidden files"></p>
+                                </div>
+                                <p class="w-full text-[#827F7F] text-[10px]">Вы можете прикрепить файлы в формате jpg, png. <br> Размером не более 20 Мб</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="w-full pb-2 border-b border-black flex items-start justify-between dropdown-toggler" type="button">
+                    <p class="text-left">Характеристика голоса исполнителя</p>
+                    <img src="../Assets/Images/icons/dropdown.svg" alt="" class="transition-all duration-500 dropdown-img mt-1">
+                </button>
+                <div class="hidden dropdown-list pb-4">
+                    <div class="flex flex-col gap-5 mt-2.5 text-sm">
+                        <div class="flex flex-col gap-2.5">
+                            <textarea name="" id="" class="p-2 resize-none border border-[#79838B] rounded-[10px] h-[104px]" placeholder="Описание моего голоса"></textarea>
+                            <textarea name="" id="" class="p-2 resize-none border border-[#79838B] rounded-[10px] h-[104px]" placeholder="Оборудование"></textarea>
+                        </div>
+                        <div class="flex flex-col gap-2.5 text-sm">
+                            <p>Голос</p>
+                            <div class="grid grid-cols-3 gap-1">                
+                                <input type="radio" name="voice" class="hidden custom-radio" id="man">
+                                <label for="man" class="rounded-[10px] py-1 flex items-center justify-center border border-[#79838B]">Мужской</label>
+                                <input type="radio" name="voice" class="hidden custom-radio" id="woman">
+                                <label for="woman" class="rounded-[10px] py-1 flex items-center justify-center border border-[#79838B]">Женский</label>
+                                <input type="radio" name="voice" class="hidden custom-radio" id="kid">
+                                <label for="kid" class="rounded-[10px] py-1 flex items-center justify-center border border-[#79838B]">Детский</label>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-5 text-sm">
+                            <div class="flex flex-col gap-2">
+                                <p>Возраст голоса</p>
+                                <div class="flex items-center gap-2.5 text-sm">
+                                    <input type="radio" name="filter2" id="adult" class="w-[22px] h-[22px] shrink-0">
+                                    <label for="adult">Взрослый</label>
+                                </div>
+                                <div class="flex items-center gap-2.5 text-sm">
+                                    <input type="radio" name="filter2" id="child" class="w-[22px] h-[22px] shrink-0">
+                                    <label for="child">Детский</label>
+                                </div>
+                                <div class="flex items-center gap-2.5 text-sm">
+                                    <input type="radio" name="filter2" id="young" class="w-[22px] h-[22px] shrink-0">
+                                    <label for="young">Молодой</label>
+                                </div>
+                                <div class="flex items-center gap-2.5 text-sm">
+                                    <input type="radio" name="filter2" id="sub" class="w-[22px] h-[22px] shrink-0">
+                                    <label for="sub">Подростковый</label>
+                                </div>
+                                <div class="flex items-center gap-2.5 text-sm">
+                                    <input type="radio" name="filter2" id="elderly" class="w-[22px] h-[22px] shrink-0">
+                                    <label for="elderly">Пожилой</label>
+                                </div>
+                                <div class="flex items-center gap-2.5 text-sm">
+                                    <input type="radio" name="filter2" id="middle" class="w-[22px] h-[22px] shrink-0">
+                                    <label for="middle">Средний</label>
+                                </div>
+                                <div class="flex items-center gap-2.5 text-sm">
+                                    <input type="radio" name="filter2" id="senile" class="w-[22px] h-[22px] shrink-0">
+                                    <label for="senile">Старческий</label>
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <p>Тембр голоса</p>
+                                <div class="flex items-center gap-2.5 text-sm">
+                                    <input type="radio" name="filter3" id="high" class="w-[22px] h-[22px] shrink-0">
+                                    <label for="high">Высокий</label>
+                                </div>
+                                <div class="flex items-center gap-2.5 text-sm">
+                                    <input type="radio" name="filter3" id="childs" class="w-[22px] h-[22px] shrink-0">
+                                    <label for="childs">Детский</label>
+                                </div>
+                                <div class="flex items-center gap-2.5 text-sm">
+                                    <input type="radio" name="filter3" id="low" class="w-[22px] h-[22px] shrink-0">
+                                    <label for="low">Низкий</label>
+                                </div>
+                                <div class="flex items-center gap-2.5 text-sm">
+                                    <input type="radio" name="filter3" id="average" class="w-[22px] h-[22px] shrink-0">
+                                    <label for="average">Средний</label>
+                                </div>
+                            </div>
+                            <p class="col-span-full">Характеристики голоса</p>
+                            <div class="flex flex-col gap-2 -mt-2.5">
+                                <div class="flex items-center gap-2.5 text-sm">
+                                    <input type="radio" name="filter4" id="cheerful" class="w-[22px] h-[22px] shrink-0">
+                                    <label for="cheerful">Веселый</label>
+                                </div>
+                                <div class="flex items-center gap-2.5 text-sm">
+                                    <input type="radio" name="filter4" id="vocalist" class="w-[22px] h-[22px] shrink-0">
+                                    <label for="vocalist">Вокалист</label>
+                                </div>
+                                <div class="flex items-center gap-2.5 text-sm">
+                                    <input type="radio" name="filter4" id="game" class="w-[22px] h-[22px] shrink-0">
+                                    <label for="game">Игровой</label>
+                                </div>
+                                <div class="flex items-center gap-2.5 text-sm">
+                                    <input type="radio" name="filter4" id="info" class="w-[22px] h-[22px] shrink-0">
+                                    <label for="info">Информационный</label>
+                                </div>
+                                <div class="flex items-center gap-2.5 text-sm">
+                                    <input type="radio" name="filter4" id="classic" class="w-[22px] h-[22px] shrink-0">
+                                    <label for="classic">Классический (конферансье)</label>
+                                </div>
+                                <div class="flex items-center gap-2.5 text-sm">
+                                    <input type="radio" name="filter4" id="club" class="w-[22px] h-[22px] shrink-0">
+                                    <label for="club">Клубный</label>
+                                </div>                            
+                            </div>
+                            <div class="flex flex-col gap-2 -mt-2.5">
+                                <div class="flex items-center gap-2.5 text-sm">
+                                    <input type="radio" name="filter4" id="national" class="w-[22px] h-[22px] shrink-0">
+                                    <label for="national">Народный</label>
+                                </div>
+                                <div class="flex items-center gap-2.5 text-sm">
+                                    <input type="radio" name="filter4" id="parodist" class="w-[22px] h-[22px] shrink-0">
+                                    <label for="parodist">Пародист</label>
+                                </div>
+                                <div class="flex items-center gap-2.5 text-sm">
+                                    <input type="radio" name="filter4" id="pretentious" class="w-[22px] h-[22px] shrink-0">
+                                    <label for="pretentious">Пафосный</label>
+                                </div>
+                                <div class="flex items-center gap-2.5 text-sm">
+                                    <input type="radio" name="filter4" id="romantic" class="w-[22px] h-[22px] shrink-0">
+                                    <label for="romantic">Романтичный</label>
+                                </div>
+                                <div class="flex items-center gap-2.5 text-sm">
+                                    <input type="radio" name="filter4" id="rap" class="w-[22px] h-[22px] shrink-0">
+                                    <label for="rap">Рэп</label>
+                                </div>
+                                <div class="flex items-center gap-2.5 text-sm">
+                                    <input type="radio" name="filter4" id="sexy" class="w-[22px] h-[22px] shrink-0">
+                                    <label for="sexy">Сексуальный</label>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
