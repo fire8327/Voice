@@ -75,6 +75,7 @@ $("#close_reg, #overlay_reg").click(()=>{
 $( function() {
   $( "#tabs-work").tabs();  
   $( "#tabs-profile").tabs();
+  $( "#tabs-client").tabs();
 } );
 
 

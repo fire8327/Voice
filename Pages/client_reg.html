@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Assets/CSS/custom.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Регистрация клиента</title>
+    <style type="text/tailwindcss">
+        .ui-tabs-tab {
+            @apply border border-[#79838B] text-[#79838B] py-1 w-[117px] flex items-center justify-center rounded-[10px] text-sm;
+        }
+        .ui-tabs-active {
+            @apply bg-[#F76B24] text-white border-[#F76B24];
+        }
+    </style>
+</head>
+<body class="inter">
+    <header class="w-full px-6">
+        <div class="flex items-center justify-between pt-1 pb-px border-b border-black" id="nav">
+            <a href="../index.html"><img src="../Assets/Images/header/logo.svg" alt=""></a>
+            <div class="flex items-center gap-2.5">
+                <button>
+                    <img src="../Assets/Images/header/phone.svg" alt="">
+                </button>
+                <button>
+                    <img src="../Assets/Images/header/chat.svg" alt="">
+                </button>
+                <button type="button" class="relative h-6 w-6" id="toggler">
+                    <img src="../Assets/Images/header/menu.svg" alt="" class="absolute top-0 left-0">
+                    <img src="../Assets/Images/header/close.svg" alt="" class="absolute top-0 left-0 hidden">
+                </button>
+            </div>
+        </div>
+    </header>  
+    <div class="w-full px-6 left-0 absolute top-auto z-50 pt-4 pb-[137px] flex flex-col bg-[#F0F0F0] inter text-xl transition-all duration-500 -translate-y-[calc(100%+43px)]" id="menu">
+        <button class="bg-[#F76B24] pl-4 pr-3 py-3 text-white self-end rounded-[20px]">Вход и регистрация</button>
+        <div class="dropdown">
+            <button class="w-full pb-2 border-b border-black flex items-end justify-between mt-9 dropdown-toggler" type="button">
+                <span>База дикторов</span>
+                <img src="../Assets/Images/icons/dropdown.svg" alt="" class="transition-all duration-500 dropdown-img">
+            </button>
+            <div class="hidden dropdown-list">
+                <div class="flex flex-col text-base gap-2.5 mt-2.5 text-[#616060]">
+                    <a href="#" class="pb-1 border-b border-[#79838B] px-6 w-full">Дикторский голос</a>
+                    <a href="" class="pb-1 border-b border-[#79838B] px-6 w-full">Аудиоролик</a>
+                    <a href="" class="pb-1 border-b border-[#79838B] px-6 w-full">Вокал</a>
+                    <a href="" class="pb-1 border-b border-[#79838B] px-6 w-full">Пародия</a>
+                    <a href="" class="pb-1 border-b border-[#79838B] px-6 w-full">Сценарий</a>
+                </div>
+            </div>
+        </div>
+        <div class="dropdown">            
+            <button class="w-full pb-2 border-b border-black flex items-end justify-between pt-4 dropdown-toggler" type="button">
+                <span>Купить</span>
+                <img src="../Assets/Images/icons/dropdown.svg" alt="" class="transition-all duration-500 dropdown-img">
+            </button>
+            <div class="hidden dropdown-list">
+                <div class="flex flex-col text-base gap-2.5 mt-2.5 text-[#616060]">
+                    <a href="" class="pb-1 border-b border-[#79838B] px-6 w-full">Дикторский голос</a>
+                    <a href="" class="pb-1 border-b border-[#79838B] px-6 w-full">Аудиоролик</a>
+                    <a href="" class="pb-1 border-b border-[#79838B] px-6 w-full">Вокал</a>
+                    <a href="" class="pb-1 border-b border-[#79838B] px-6 w-full">Пародия</a>
+                    <a href="" class="pb-1 border-b border-[#79838B] px-6 w-full">Сценарий</a>
+                </div>
+            </div>
+        </div>
+        <a href="" class="w-full pb-2 border-b border-black pt-4">Цены</a>
+        <a href="" class="w-full pb-2 border-b border-black pt-4">Дикторы по популярности</a>
+        <a href="" class="w-full pb-2 border-b border-black pt-4">Рассчитать стоимость</a>
+        <a href="" class="w-full pb-2 border-b border-black pt-4">Контакты</a>
+        <a href="tel:8 800 000 00 00" class="pt-10">8 800 000 00 00 </a>
+    </div>
+
+    <div class="w-full px-6 pt-1 flex gap-1 text-[10px] text-[#827F7F]">
+        <a href="../index.html">Главная</a>
+        <p>/</p>
+        <p>Регистрация клиента</p>
+    </div>
+
+    <form action="client_complete.html" class="w-full px-6 pt-3 flex flex-col gap-2.5 pb-[50px]">
+        <p class="text-xl prata">Регистрация клиента</p>
+        <p>Регистрируюсь как</p>
+        <div id="tabs-client" class="flex flex-col gap-5">
+            <ul class="flex items-center gap-1">
+                <li><a href="#tabs-client-1">Физ.лицо</a></li>
+                <li><a href="#tabs-client-2">Юр.лицо</a></li>
+                <li><a href="#tabs-client-3">ИП</a></li>
+            </ul>
+            <div class="flex flex-col gap-5">
+                <div class="flex flex-col gap-1">
+                    <input type="email" class="py-0.5 px-2.5 border border-[#79838B] rounded-[10px]" placeholder="E-mail">
+                    <p class="text-[10px] text-[#79838B]">Будет использоваться для входа в личный кабинет</p>
+                </div>
+                <div class="flex flex-col gap-1">
+                    <input type="password" class="py-0.5 px-2.5 border border-[#79838B] rounded-[10px]" placeholder="Придумайте пароль">
+                    <p class="text-[10px] text-[#79838B]">Только латинские буквы и цифры, не меньше 8 символов</p>
+                </div>
+                <input type="text" class="py-0.5 px-2.5 border border-[#79838B] rounded-[10px]" placeholder="Имя">
+                <input type="text" class="py-0.5 px-2.5 border border-[#79838B] rounded-[10px]" placeholder="Фамилия">
+                <input type="text" class="py-0.5 px-2.5 border border-[#79838B] rounded-[10px]" placeholder="Город">
+            </div>
+            <div class="flex flex-col gap-5" id="tabs-client-1">
+                <textarea name="" id="" class="py-0.5 px-2.5 border border-[#79838B] rounded-[10px] resize-none h-24" placeholder="Расскажите откуда узнали о нас"></textarea>
+                <div class="flex items-center gap-2.5">
+                    <input type="radio" name="" id="physical" class="h-[22px] w-[22px] accent-[#79838B] shrink-0">
+                    <label for="physical" class="text-xs text-[#79838B]">Я согласен(-на) на регистрацию как физ.лицо</label>
+                </div>
+                <div class="flex items-center gap-2.5 mt-3">
+                    <input type="radio" name="" id="license" class="h-[22px] w-[22px] accent-[#79838B] shrink-0">
+                    <label for="license" class="text-xs text-[#79838B]">Я согласен(-на) <a href="" class="text-[#F76B24]">с лицензионным соглашением</a>, <a href="" class="text-[#F76B24]">условиями</a> проекта и <a href="" class="text-[#F76B24]">правилами партнерства</a></label>
+                </div>
+                <div class="flex flex-col gap-2.5">
+                    <div class="flex items-center gap-2.5">
+                        <input type="radio" name="" id="ads" class="h-[22px] w-[22px] accent-[#79838B] shrink-0">
+                        <label for="ads" class="text-xs text-[#79838B]">Я согласен(-на) получать информационную и рекламную <a href="" class="text-[#F76B24]">email-рассылку</a></label>
+                    </div>
+                    <p class="text-xs text-[#79838B]">Все поля обязательны</p>
+                </div>
+            </div>
+            <div class="flex flex-col gap-5" id="tabs-client-2"></div>
+            <div class="flex flex-col gap-5" id="tabs-client-3"></div>
+            <button type="submit" class="py-3 px-4 rounded-[20px] bg-[#F76B24] text-white w-fit mx-auto text-xl font-medium">Зарегистрироваться</button>
+        </div>
+    </form>
+
+    <footer class="w-full flex flex-col gap-4 bg-[#F0F0F0] px-6 pb-4 text-xs">
+        <div class="w-full flex items-center justify-between">
+            <a href="../index.html"><img src="../Assets/Images/header/logo.svg" alt=""></a>
+            <a href="tel:8 800 000 00 00">8 800 000 00 00</a>
+        </div>
+        <div class="grid grid-cols-2 gap-6">
+            <div class="flex flex-col gap-3">
+                <p class="text-sm">Магазин</p>
+                <div class="flex flex-col gap-1.5">
+                    <a href="">База дикторов</a>
+                    <a href="">Дикторы по популярности</a>
+                    <a href="">Регистрация исполнителя</a>
+                    <a href="">Файлообменник</a>
+                </div>
+            </div>
+            <div class="flex flex-col gap-3">
+                <p class="text-sm">Покупка</p>
+                <div class="flex flex-col gap-1.5">
+                    <a href="">Купить</a>
+                    <a href="">Цены</a>
+                    <a href="">Рассчитать стоимость</a>
+                    <a href="">Как оплатить</a>
+                    <a href="">Скидки и бонусы</a>
+                </div>
+            </div>
+            <div class="flex flex-col gap-3">
+                <p class="text-sm">Компания</p>
+                <div class="flex flex-col gap-1.5">
+                    <a href="">О нас</a>
+                    <a href="">Обратная связь</a>
+                    <a href="">Работа с нами</a>
+                    <a href="#">Контакты</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+	<script src="https://code.jquery.com/jquery-3.6.3.min.js" 
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+    crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+	<script src="../Assets/JS/custom.js"></script>
+</body>
+</html>
