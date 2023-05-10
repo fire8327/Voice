@@ -79,7 +79,7 @@
         <p>Регистрация клиента</p>
     </div>
 
-    <form action="client_complete.html" class="w-full px-6 pt-3 flex flex-col gap-2.5 pb-[50px]">
+    <form action="client_complete.html" class="w-full px-6 pt-3 flex flex-col gap-2.5 pb-[50px] text-sm">
         <p class="text-xl prata">Регистрация клиента</p>
         <p>Регистрируюсь как</p>
         <div id="tabs-client" class="flex flex-col gap-5">
@@ -90,20 +90,99 @@
             </ul>
             <div class="flex flex-col gap-5">
                 <div class="flex flex-col gap-1">
-                    <input type="email" class="py-0.5 px-2.5 border border-[#79838B] rounded-[10px]" placeholder="E-mail">
+                    <input type="email" class="py-1 px-2.5 border border-[#79838B] rounded-[10px]" placeholder="E-mail">
                     <p class="text-[10px] text-[#79838B]">Будет использоваться для входа в личный кабинет</p>
                 </div>
                 <div class="flex flex-col gap-1">
-                    <input type="password" class="py-0.5 px-2.5 border border-[#79838B] rounded-[10px]" placeholder="Придумайте пароль">
+                    <input type="password" class="py-1 px-2.5 border border-[#79838B] rounded-[10px]" placeholder="Придумайте пароль">
                     <p class="text-[10px] text-[#79838B]">Только латинские буквы и цифры, не меньше 8 символов</p>
                 </div>
-                <input type="text" class="py-0.5 px-2.5 border border-[#79838B] rounded-[10px]" placeholder="Имя">
-                <input type="text" class="py-0.5 px-2.5 border border-[#79838B] rounded-[10px]" placeholder="Фамилия">
-                <input type="text" class="py-0.5 px-2.5 border border-[#79838B] rounded-[10px]" placeholder="Город">
+                <input type="text" class="py-1 px-2.5 border border-[#79838B] rounded-[10px]" placeholder="Имя">
+                <input type="text" class="py-1 px-2.5 border border-[#79838B] rounded-[10px]" placeholder="Фамилия">
+                <input type="text" class="py-1 px-2.5 border border-[#79838B] rounded-[10px]" placeholder="Город">
             </div>                        
-            <div class="flex flex-col gap-5" id="tabs-client-2"></div>
-            <div class="flex flex-col gap-5" id="tabs-client-3"></div>
-            <textarea name="" id="" class="py-0.5 px-2.5 border border-[#79838B] rounded-[10px] resize-none h-24" placeholder="Расскажите откуда узнали о нас"></textarea>
+            <div class="flex flex-col gap-5" id="tabs-client-2">
+                <div class="flex flex-col gap-1">
+                    <p>Реквизиты для заключения договора</p>
+                    <div class="flex flex-col gap-2.5">
+                        <p class="text-[10px] text-[#79838B]">На эти реквизиты будем выставлять вам счета для оплаты</p>
+                        <input type="text" class="py-1 px-2.5 border border-[#79838B] rounded-[10px]" placeholder="Организация">
+                    </div>
+                    <p class="text-[10px] text-[#79838B]">Введите название, ИНН или ОГРН</p>
+                </div>
+                <input type="number" class="py-1 px-2.5 border border-[#79838B] rounded-[10px]" placeholder="ИНН">
+                <input type="number" class="py-1 px-2.5 border border-[#79838B] rounded-[10px]" placeholder="КПП">
+                <div class="flex flex-col gap-1">                    
+                    <input type="text" class="py-1 px-2.5 border border-[#79838B] rounded-[10px]" placeholder="ФИО директора">
+                    <p class="text-[10px] text-[#79838B]">ФИО полностью в родительном падеже, например,  Иванова Ивана Ивановича, необходимо для генерации договора</p>
+                </div>
+                <input type="text" class="py-1 px-2.5 border border-[#79838B] rounded-[10px]" placeholder="Должность">
+                <input type="text" class="py-1 px-2.5 border border-[#79838B] rounded-[10px]" placeholder="Юр.адрес">
+                <input type="text" class="py-1 px-2.5 border border-[#79838B] rounded-[10px]" placeholder="Банк">
+                <input type="number" class="py-1 px-2.5 border border-[#79838B] rounded-[10px]" placeholder="БИК">
+                <input type="number" class="py-1 px-2.5 border border-[#79838B] rounded-[10px]" placeholder="Корр/счет">
+                <input type="number" class="py-1 px-2.5 border border-[#79838B] rounded-[10px]" placeholder="Расчетный счет">
+                <div class="flex flex-col gap-5" id="tabs-doc1">
+                    <div class="flex flex-col gap-2.5">
+                        <p>Хочу получать бух.документацию</p>
+                        <ul class="flex items-center gap-1">
+                            <li><a href="#tabs-doc1-1">Нет</a></li>
+                            <li><a href="#tabs-doc1-2">Почтой России</a></li>
+                            <li><a href="#tabs-doc1-3">ЭДО</a></li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-col gap-5" id="tabs-doc1-2">
+                        <input type="number" class="py-1 px-2.5 border border-[#79838B] rounded-[10px]" placeholder="Почтовый индекс">
+                        <input type="text" class="py-1 px-2.5 border border-[#79838B] rounded-[10px]" placeholder="Почтовый адрес">
+                    </div>
+                    <div class="flex items-center gap-4 -mt-4" id="tabs-doc1-3">
+                        <p>Мы обмениваемся электронными документами через сервис:</p>
+                        <img src="../Assets/Images/icons/diadok.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col gap-5" id="tabs-client-3">
+                <div class="flex flex-col gap-1">
+                    <p>Реквизиты для заключения договора</p>
+                    <div class="flex flex-col gap-2.5">
+                        <p class="text-[10px] text-[#79838B]">На эти реквизиты будем выставлять вам счета для оплаты</p>
+                        <input type="text" class="py-1 px-2.5 border border-[#79838B] rounded-[10px]" placeholder="ФИО ИП">
+                    </div>
+                    <p class="text-[10px] text-[#79838B]">Введите ФИО полностью, ИНН или ОГРН</p>
+                </div>
+                <input type="number" class="py-1 px-2.5 border border-[#79838B] rounded-[10px]" placeholder="ИНН">
+                <input type="text" class="py-1 px-2.5 border border-[#79838B] rounded-[10px]" placeholder="Юридический адрес">
+                <input type="number" class="py-1 px-2.5 border border-[#79838B] rounded-[10px]" placeholder="Серия свидетельства">
+                <div class="flex flex-col gap-1">
+                    <input type="number" class="py-1 px-2.5 border border-[#79838B] rounded-[10px]" placeholder="Номер свидетельства">
+                    <p class="text-[10px] text-[#79838B] text-center">Или</p>
+                    <input type="number" class="py-1 px-2.5 border border-[#79838B] rounded-[10px]" placeholder="Номер листа записи ЕГРИП">
+                </div>
+                <input type="text" class="py-1 px-2.5 border border-[#79838B] rounded-[10px]" placeholder="Дата выдачи">
+                <input type="text" class="py-1 px-2.5 border border-[#79838B] rounded-[10px]" placeholder="Банк">
+                <input type="number" class="py-1 px-2.5 border border-[#79838B] rounded-[10px]" placeholder="БИК">
+                <input type="number" class="py-1 px-2.5 border border-[#79838B] rounded-[10px]" placeholder="Корр/счет">
+                <input type="number" class="py-1 px-2.5 border border-[#79838B] rounded-[10px]" placeholder="Расчетный счет">
+                <div class="flex flex-col gap-5" id="tabs-doc2">
+                    <div class="flex flex-col gap-2.5">
+                        <p>Хочу получать бух.документацию</p>
+                        <ul class="flex items-center gap-1">
+                            <li><a href="#tabs-doc2-1">Нет</a></li>
+                            <li><a href="#tabs-doc2-2">Почтой России</a></li>
+                            <li><a href="#tabs-doc2-3">ЭДО</a></li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-col gap-5" id="tabs-doc2-2">
+                        <input type="number" class="py-1 px-2.5 border border-[#79838B] rounded-[10px]" placeholder="Почтовый индекс">
+                        <input type="text" class="py-1 px-2.5 border border-[#79838B] rounded-[10px]" placeholder="Почтовый адрес">
+                    </div>
+                    <div class="flex items-center gap-4 -mt-4" id="tabs-doc2-3">
+                        <p>Мы обмениваемся электронными документами через сервис:</p>
+                        <img src="../Assets/Images/icons/diadok.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <textarea name="" id="" class="py-1 px-2.5 border border-[#79838B] rounded-[10px] resize-none h-24" placeholder="Расскажите откуда узнали о нас"></textarea>
             <div class="flex flex-col gap-5" id="tabs-client-1">
                 <div class="flex items-center gap-2.5">
                     <input type="radio" name="" id="physical" class="h-[22px] w-[22px] accent-[#79838B] shrink-0">

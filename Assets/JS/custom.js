@@ -76,6 +76,8 @@ $( function() {
   $( "#tabs-work").tabs();  
   $( "#tabs-profile").tabs();
   $( "#tabs-client").tabs();
+  $( "#tabs-doc1").tabs();
+  $( "#tabs-doc2").tabs();
 } );
 
 
