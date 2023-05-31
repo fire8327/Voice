@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Assets/CSS/custom.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>База дикторов</title>
+    <title>База пародистов</title>
 </head>
 <body class="inter">
     <header class="w-full px-6">
@@ -68,46 +68,44 @@
     <div class="w-full px-6 pt-1 flex gap-1 text-[10px] text-[#827F7F]">
         <a href="../index.html">Главная</a>
         <p>/</p>
-        <p>База дикторов</p>
+        <p>База пародистов</p>
     </div>
 
-    <div class="w-full px-6 pt-3 flex flex-col">
-        <p class="text-xl prata">База дикторов</p>
-        <div class="grid grid-cols-2 gap-5 pt-2.5 text-sm">
-            <div class="flex flex-col gap-2.5">
-                <p>Голоса</p>
-                <div class="flex flex-col gap-5">
-                    <div>
-                        <input type="checkbox" name="voices" id="man" class="hidden custom-checkbox">
-                        <label for="man" class="w-full rounded-[10px] border border-[#79838B] py-1 flex items-center justify-center">Мужские</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" name="voices" id="woman" class="hidden custom-checkbox">
-                        <label for="woman" class="w-full rounded-[10px] border border-[#79838B] py-1 flex items-center justify-center">Женские</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" name="voices" id="kid" class="hidden custom-checkbox">
-                        <label for="kid" class="w-full rounded-[10px] border border-[#79838B] py-1 flex items-center justify-center">Детские</label>
-                    </div>
+    <div class="w-full px-6 pt-3 flex flex-col gap-5">
+        <p class="text-xl prata">База пародистов</p>
+        <div class="flex flex-col gap-2.5 -mt-2">
+            <p>Персонаж</p>
+            <select name="" id="" class="rounded-[10px] border border-[#79838B] py-1 px-2.5 text-sm">
+                <option value="" selected disabled>Выберите персонажа</option>
+                <option value="">Персонаж 1</option>
+                <option value="">Персонаж 2</option>
+                <option value="">Персонаж 3</option>
+            </select>
+        </div>
+        <div class="relative text-sm">
+            <img src="../Assets/Images/icons/search.svg" class="absolute top-1/2 -translate-y-1/2 left-1">
+            <input type="text" class="w-full px-6 py-1 rounded-[10px] border border-[#79838B]" placeholder="Поиск по персонажу">
+        </div>
+        <div class="flex flex-col gap-2.5">
+            <p>Время записи</p>
+            <div class="grid grid-cols-3 gap-1">
+                <div>
+                    <input type="checkbox" name="hours" id="halfhour" class="hidden custom-checkbox">
+                    <label for="halfhour" class="w-full rounded-[10px] border border-[#79838B] py-1 flex items-center justify-center">30 мин</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="hours" id="hour" class="hidden custom-checkbox">
+                    <label for="hour" class="w-full rounded-[10px] border border-[#79838B] py-1 flex items-center justify-center">1 час</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="hours" id="hourhalf" class="hidden custom-checkbox">
+                    <label for="hourhalf" class="w-full rounded-[10px] border border-[#79838B] py-1 flex items-center justify-center">1,5 часа</label>
                 </div>
             </div>
-            <div class="flex flex-col gap-2.5">
-                <p>Время записи</p>
-                <div class="flex flex-col gap-5">
-                    <div>
-                        <input type="checkbox" name="hours" id="halfhour" class="hidden custom-checkbox">
-                        <label for="halfhour" class="w-full rounded-[10px] border border-[#79838B] py-1 flex items-center justify-center">30 мин</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" name="hours" id="hour" class="hidden custom-checkbox">
-                        <label for="hour" class="w-full rounded-[10px] border border-[#79838B] py-1 flex items-center justify-center">1 час</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" name="hours" id="hourhalf" class="hidden custom-checkbox">
-                        <label for="hourhalf" class="w-full rounded-[10px] border border-[#79838B] py-1 flex items-center justify-center">1,5 часа</label>
-                    </div>
-                </div>
-            </div>
+        </div>     
+        <div class="relative text-sm">
+            <img src="../Assets/Images/icons/search.svg" class="absolute top-1/2 -translate-y-1/2 left-1">
+            <input type="text" class="w-full px-6 py-1 rounded-[10px] border border-[#79838B]" placeholder="Поиск по имени">
         </div>
     </div>
 
@@ -118,10 +116,6 @@
                 <option value="">По последнему заказу</option>
                 <option value="">По первому заказу</option>
             </select>
-            <div class="relative text-sm">
-                <img src="../Assets/Images/icons/search.svg" class="absolute top-1/2 -translate-y-1/2 left-1">
-                <input type="text" class="w-full px-6 py-1 rounded-[10px] border border-[#79838B]" placeholder="Поиск по имени">
-            </div>
             <div class="flex flex-col gap-2 text-sm">
                 <div class="flex items-center gap-2.5">
                     <input type="radio" name="filter1" id="online" class="w-[22px] h-[22px] shrink-0">
@@ -134,10 +128,6 @@
                 <div class="flex items-center gap-2.5">
                     <input type="radio" name="filter1" id="bonus" class="w-[22px] h-[22px] shrink-0">
                     <label for="bonus">Участник бонусной программы</label>
-                </div>
-                <div class="flex items-center gap-2.5">
-                    <input type="radio" name="filter1" id="dub" class="w-[22px] h-[22px] shrink-0">
-                    <label for="dub">Могут делать дубляж видео</label>
                 </div>
             </div>
             <div class="hidden" id="more_filters">
